@@ -1,13 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
+// Bootstrap CSS
+import "bootstrap/dist/css/bootstrap.min.css";
+// Bootstrap Bundle JS
+import "bootstrap/dist/js/bootstrap.bundle.min";
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Route, Link } from "react-router-dom";
 
 
-var Grid = () => {
+let Grid = () => {
   return (
-    <h1>test</h1>
+    <div className='container'>
+
+      <div className='row'>
+      <div className='col-12 text-center'>
+        <h1 className='heading'>The MERN Post</h1>
+      </div>
+      </div>
+
+      <div className='row'></div>
+      <div className='row'></div>
+      <div className='row'></div>
+    </div>
   );
 
 };
@@ -15,7 +33,7 @@ var Grid = () => {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Grid />
   </React.StrictMode>
 );
 
