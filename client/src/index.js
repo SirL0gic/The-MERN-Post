@@ -7,7 +7,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
-import GridHome from './components/GridHome';
+import GridHome from './pages/Home';
 
 
 
