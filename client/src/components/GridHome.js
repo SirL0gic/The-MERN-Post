@@ -22,12 +22,11 @@ import './custom.css';
 
 
 let GridHome = () => {
-    const [time, setTime] = useState("");
     
     return(
         <Container>
             <Row>
-                <Col lg={12}>
+                <Col xxl={12}>
                 <div className="main-heading">
                     <h1 className="text-center">The MERN Post</h1>
                 </div>
