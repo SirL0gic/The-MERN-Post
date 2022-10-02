@@ -1,17 +1,18 @@
 import React from "react";
 import LiveClock from "react-live-clock";
 
-var current_date = new Date();
-var year = current_date.getFullYear();
-var month = current_date.getMonth() + 1;
-var day = current_date.getDate();
-
+let current_date = new Date();
+let year = current_date.getFullYear();
+let month = current_date.getMonth() + 1;
+let day = current_date.getDate();
 let final_date = day + "/" + month + "/" + year; 
+let time_zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
 
 function DateTime() {
     return (
       <p>
-        {final_date} <LiveClock format="hh:mm:ss a" ticking /> {" GMT+0400 (Gulf Standard Time)"}
+        {final_date} <LiveClock format="hh:mm:ss a" ticking /> {time_zone}
       </p>
     );
   }
