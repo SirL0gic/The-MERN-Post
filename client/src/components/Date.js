@@ -6,7 +6,7 @@ var year = current_date.getFullYear();
 var month = current_date.getMonth() + 1;
 var day = current_date.getDate();
 
-var final_date = day + "/" + month + "/" + year; 
+let final_date = day + "/" + month + "/" + year; 
 
 function DateTime() {
     return (
