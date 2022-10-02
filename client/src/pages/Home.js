@@ -1,19 +1,18 @@
-//BS components
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-
 import DateTime from '../components/Date';
-
 import React, {useState, useEffect } from "react";
 
-//extra css
+//extra css fro BS
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 // Bootstrap Bundle JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
+
+//BS components
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 //custom css
 import './custom.css';
