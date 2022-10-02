@@ -12,7 +12,7 @@ let time_zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 function DateTime() {
     return (
       <p>
-        {final_date} <LiveClock format="hh:mm:ss a" ticking /> {time_zone}
+        {final_date} <LiveClock format="hh:mm:ss a" ticking /> {" " + time_zone}
       </p>
     );
   }
