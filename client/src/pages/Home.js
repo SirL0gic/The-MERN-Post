@@ -15,10 +15,18 @@ import Col from 'react-bootstrap/Col';
 import './custom.css';
 
 import NavBar from '../components/Nav';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+
+import SportsPage from './Sports';
 
 let GridHome = () => {
     
     return(
+        <BrowserRouter>
+
+        
+
         <Container>
             <Row>
                 <Col xxl={12}>
@@ -42,7 +50,18 @@ let GridHome = () => {
                 <Col>3 of 3</Col>
             </Row>
         </Container>
+
+        <Routes>
+        <Route path='/' exact element={GridHome} />
+        <Route path='/sports' element={SportsPage} />
+        </Routes>
+        
+        </BrowserRouter>
     );
 }
 
 export default GridHome;
+
+
+
+   
