@@ -3,8 +3,6 @@ import React, { Component, useState, useEffect } from "react";
 
 //importing navigation
 import {Route, Routes } from "react-router-dom";
-import NavBar from "./components/Nav";
-
 
 //importing pages
 import HomePage from "./pages/Home";
@@ -23,18 +21,14 @@ function App() {
   //   )
   // }, [])
   
-  <Routes>
-  <Route path="/" element={<HomePage />} />
-  <Route path="/sports" element={<SportsPage />} />
-  </Routes>
-
   return (
-    <h1>hello</h1>
-  
-    // <div>
-    //   <h1>Hello CodeSandbox</h1>
-    //   {<h3>{backendData.users}</h3>}
-    // </div>
+    <div className="App">
+    <Routes>
+      <Route path="/" element={ <HomePage/> } />
+      <Route path="sports" element={ <SportsPage/> } />
+    </Routes>
+    </div>
+
   );
 }
 

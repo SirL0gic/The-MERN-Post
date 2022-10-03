@@ -12,8 +12,11 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 //Custom css
-import './custom.css';
+import '../css/custom.css'
 import NavBar from '../components/Nav';
+
+import Header from '../components/Head';
+
 
 let HomePage = () => {
     
@@ -21,8 +24,8 @@ let HomePage = () => {
         <Container>
             <Row>
                 <Col xxl={12}>
-                <div className="main-heading">
-                    <h1 className="text-center">The MERN Post</h1>
+                <div className="main-heading-area">
+                    <h1 className="text-center">{<Header />}</h1>
                 </div>
                 <div className="date-area">
                     <div className="text-center"> 
@@ -34,7 +37,10 @@ let HomePage = () => {
 
             <Row>
                 <Col>
-                <NavBar />
+                <div className="text-center">
+                    <NavBar />
+                </div>
+                
                 </Col>
             </Row>
             <Row>
