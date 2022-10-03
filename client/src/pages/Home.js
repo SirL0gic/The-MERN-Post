@@ -1,4 +1,5 @@
 import DateTime from '../components/Date';
+
 import React, {useState, useEffect } from "react";
 //extra css fro BS
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,6 +13,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 //Custom css
 import './custom.css';
+
+import NavBar from '../components/Nav';
 
 let GridHome = () => {
     
@@ -27,11 +30,13 @@ let GridHome = () => {
                     <p className="date-display">{<DateTime />}</p>
                     </div>
                 </div>
-                    
                 </Col>
             </Row>
+
             <Row>
-                <Col>2 of 3</Col>
+                <Col>
+                <NavBar />
+                </Col>
             </Row>
             <Row>
                 <Col>3 of 3</Col>
