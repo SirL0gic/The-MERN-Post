@@ -6,17 +6,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import { BrowserRouter, Switch, Route, Routes } from "react-router-dom";
-
-import GridHome from './pages/Home';
-import SportsPage from './pages/Sports';
-
-
+import { BrowserRouter} from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <GridHome /> 
+    <BrowserRouter>
+    <App /> 
+    </BrowserRouter>
   </React.StrictMode>
 );
 
