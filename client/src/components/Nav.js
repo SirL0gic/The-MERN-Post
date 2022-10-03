@@ -5,16 +5,16 @@ let NavBar = () => {
     return (
         <div>
         <li>
-          <Link to="/">Dogs</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/cats">Cats</Link>
+          <Link to="/sports">Sports</Link>
         </li>
         <li>
-          <Link to="/sheeps">Sheeps</Link>
+          <Link to="/business">Business</Link>
         </li>
         <li>
-          <Link to="/goats">Goats</Link>
+          <Link to="/food">Food</Link>
         </li>
       </div>
 
