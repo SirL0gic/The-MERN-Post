@@ -1,3 +1,7 @@
 .main-heading-area{
     margin-top: 20px;
 }
+.no {
+    padding: 0 !important;
+    margin: 0 !important;
+ }

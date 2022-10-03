@@ -21,7 +21,15 @@ import Header from '../components/Head';
 let HomePage = () => {
     
     return(
-        <Container>
+        <Container fluid>
+            <Row>
+                <Col className='no'>
+                <div className="text-center">
+                    <NavBar />
+                </div>
+                </Col>
+            </Row>
+
             <Row>
                 <Col xxl={12}>
                 <div className="main-heading-area">
@@ -32,15 +40,6 @@ let HomePage = () => {
                     <p className="date-display">{<DateTime />}</p>
                     </div>
                 </div>
-                </Col>
-            </Row>
-
-            <Row>
-                <Col>
-                <div className="text-center">
-                    <NavBar />
-                </div>
-                
                 </Col>
             </Row>
             <Row>
