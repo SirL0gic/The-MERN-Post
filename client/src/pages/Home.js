@@ -15,7 +15,7 @@ import Header from "../components/Head";
 import DateTime from "../components/Date";
 import NewsCard from "../components/News";
 import WeatherWidget from "../components/weather";
-import { Timeline } from "react-twitter-widgets";
+import { Timeline,Tweet } from "react-twitter-widgets";
 
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -27,7 +27,7 @@ let HomePage = () => {
   return (
     <Container fluid>
       <Row>
-        <Col xxl={12} className="no-col-nav">
+        <Col lg={12} className="no-col-nav">
           <div className="text-center">
             <NavBar />
           </div>
@@ -35,7 +35,7 @@ let HomePage = () => {
       </Row>
 
       <Row>
-        <Col xxl={12}>
+        <Col lg={12}>
           <div className="main-heading-area">
             <h1 className="text-center">{<Header />}</h1>
           </div>
@@ -60,18 +60,16 @@ let HomePage = () => {
           </div>
         </Col>
 
-        <Col lg={4}>
-          <WeatherWidget />
+        <Col lg={4} className="extra-container">
 
-          <Timeline
-            dataSource={{
-              sourceType: "profile",
-              screenName: "TwitterDev",
-            }}
-            options={{
-              height: "400",
-            }}
-          />
+        <div className="weather-widget">
+        <WeatherWidget />
+        </div>
+          
+          <div className='twitter-widget'>
+            <Tweet tweetId="841418541026877441" />
+          </div>
+          
         </Col>
       </Row>
     </Container>
