@@ -25,7 +25,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 //Custom css
 import '../css/custom.css'
-import '../css/newscard.css'
 
 
 let HomePage = () => {
@@ -54,11 +53,16 @@ let HomePage = () => {
             </Row>
 
             <Row>
-                <Col lg={12}>
-                    <div className="d-flex align-items-center justify-content-center">
+                <Col lg={8}>
+                    <div className="news-area">
                         <NewsCard />
                     </div>
-                    
+                </Col>
+
+                <Col lg={4}>
+                    <div>
+                        <NewsCard />
+                    </div>
                 </Col>
             </Row>
 
