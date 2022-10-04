@@ -66,17 +66,17 @@ let HomePage = () => {
         </Col>
 
         <Col lg={4} className="extra-container">
-        <h2 className="weather-title">Weather</h2>
+        <h3 className="weather-title">Weather</h3>
         <div className="weather-widget">
         <WeatherWidget />
         </div>
           
-        <h2 className="twitter-title">Latest Tweets</h2>
+        <h3 className="twitter-title">Latest Tweets</h3>
           <div className='twitter-widget'>
             <Tweet tweetId="841418541026877441" />
           </div>
 
-          <h2 className="events-title">Events</h2>
+          <h3 className="events-title">Events</h3>
           <div className='calendar-widget'>
             <CalendarWidget/>
           </div>
