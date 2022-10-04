@@ -19,6 +19,7 @@ import NavBar from '../components/Nav';
 import Header from '../components/Head';
 import DateTime from '../components/Date';
 import NewsCard from '../components/News'
+import WeatherWidget from "../components/weather";
 
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -56,12 +57,15 @@ let HomePage = () => {
                 <Col lg={8}>
                     <div className="news-area">
                         <NewsCard />
+                        <br></br>
+                        <br></br>
+                        <NewsCard />
                     </div>
                 </Col>
 
                 <Col lg={4}>
                     <div>
-                        <NewsCard />
+                        <WeatherWidget />
                     </div>
                 </Col>
             </Row>
