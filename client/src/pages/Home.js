@@ -23,7 +23,7 @@ let HomePage = () => {
     return(
         <Container fluid>
             <Row>
-                <Col className='no'>
+                <Col  xxl={12} className='no'>
                 <div className="text-center">
                     <NavBar />
                 </div>
@@ -42,6 +42,7 @@ let HomePage = () => {
                 </div>
                 </Col>
             </Row>
+            
             <Row>
                 <Col>3 of 3</Col>
             </Row>
