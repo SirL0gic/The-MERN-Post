@@ -1,9 +1,6 @@
 //Importing Hooks
 //import React, {useState, useEffect } from "react";
 
-
-
-
 // Bootstrap Bundle JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
@@ -20,7 +17,7 @@ import Header from '../components/Head';
 import DateTime from '../components/Date';
 import NewsCard from '../components/News'
 import WeatherWidget from "../components/weather";
-import {TwitterTweetEmbed } from 'react-twitter-embed';
+// import {TwitterTweetEmbed } from 'react-twitter-embed';
 
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -70,7 +67,7 @@ let HomePage = () => {
 
                 <Col lg={4}>
                 <WeatherWidget />
-                <TwitterTweetEmbed tweetId={'933354946111705097'}/>
+                {/* <TwitterTweetEmbed tweetId={'933354946111705097'}/> */}
                 </Col>
             </Row>
 
