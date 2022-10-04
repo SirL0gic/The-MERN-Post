@@ -17,7 +17,7 @@ import Header from '../components/Head';
 import DateTime from '../components/Date';
 import NewsCard from '../components/News'
 import WeatherWidget from "../components/weather";
-// import {TwitterTweetEmbed } from 'react-twitter-embed';
+import { Timeline } from 'react-twitter-widgets';
 
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -67,7 +67,16 @@ let HomePage = () => {
 
                 <Col lg={4}>
                 <WeatherWidget />
-                {/* <TwitterTweetEmbed tweetId={'933354946111705097'}/> */}
+                
+                <Timeline
+                    dataSource={{
+                        sourceType: 'profile',
+                        screenName: 'TwitterDev'
+                    }}
+                    options={{
+                        height: '400'
+                    }}
+                    />
                 </Col>
             </Row>
 
