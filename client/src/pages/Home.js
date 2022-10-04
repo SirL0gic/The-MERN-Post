@@ -1,5 +1,5 @@
 //Importing Hooks
-//import React, {useState, useEffect } from "react";
+import React, {useState, useEffect } from "react";
 
 // Bootstrap Bundle JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
@@ -15,13 +15,17 @@ import Header from "../components/Head";
 import DateTime from "../components/Date";
 import NewsCard from "../components/News";
 import WeatherWidget from "../components/weather";
-import { Timeline,Tweet } from "react-twitter-widgets";
+import {Tweet } from "react-twitter-widgets";
+import CalendarWidget from "../components/Calendar";
+
 
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 
 //Custom css
 import "../css/custom.css";
+
+
 
 let HomePage = () => {
   return (
@@ -69,8 +73,16 @@ let HomePage = () => {
           <div className='twitter-widget'>
             <Tweet tweetId="841418541026877441" />
           </div>
+
+          <div className='calendar-widget'>
+            <CalendarWidget/>
+          </div>
           
         </Col>
+      </Row>
+
+      <Row>
+
       </Row>
     </Container>
   );
