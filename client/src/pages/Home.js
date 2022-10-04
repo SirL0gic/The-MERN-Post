@@ -54,6 +54,7 @@ let HomePage = () => {
       <Row>
         <Col lg={8}>
           <div className="news-area">
+            <h1>News Feed</h1>
             <NewsCard />
             <br></br>
             <br></br>
@@ -65,7 +66,7 @@ let HomePage = () => {
         </Col>
 
         <Col lg={4} className="extra-container">
-
+        <h2 className="weather-title">Weather</h2>
         <div className="weather-widget">
         <WeatherWidget />
         </div>
