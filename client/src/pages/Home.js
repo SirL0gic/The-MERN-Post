@@ -25,6 +25,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 //Custom css
 import '../css/custom.css'
+import '../css/newscard.css'
 
 
 let HomePage = () => {
