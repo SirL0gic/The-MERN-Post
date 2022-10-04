@@ -1,10 +1,12 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
+
+
 let NewsCard = () => {
     return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+    <Card style={{ width: '25rem' }}>
+      <Card.Img variant="top" src="https://miro.medium.com/max/720/0*ZENEM-4K7CxGa6Bk" />
       <Card.Body>
         <Card.Title>Card Title</Card.Title>
         <Card.Text>

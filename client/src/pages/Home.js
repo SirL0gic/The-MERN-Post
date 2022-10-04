@@ -22,6 +22,7 @@ import '../css/custom.css'
 import NavBar from '../components/Nav';
 import Header from '../components/Head';
 import DateTime from '../components/Date';
+import NewsCard from '../components/News'
 
 
 let HomePage = () => {
@@ -51,13 +52,18 @@ let HomePage = () => {
 
             <Row>
                 <Col>
-                <div className='news-area'>
-                    <div className="text-center">
-
-                    </div>
-                </div>
+                    <NewsCard />
                 </Col>
             </Row>
+
+            <br />
+            
+            <Row>
+                <Col>
+                    <NewsCard />
+                </Col>
+            </Row>
+
         </Container>
     );
 }
