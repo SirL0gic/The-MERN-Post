@@ -29,7 +29,7 @@ import "../css/custom.css";
 
 let HomePage = () => {
   return (
-    <Container fluid>
+    <Container fluid className="main-container">
       <Row>
         <Col lg={12} className="no-col-nav">
           <div className="text-center">
@@ -71,10 +71,12 @@ let HomePage = () => {
         <WeatherWidget />
         </div>
           
+        <h2 className="twitter-title">Latest Tweets</h2>
           <div className='twitter-widget'>
             <Tweet tweetId="841418541026877441" />
           </div>
 
+          <h2 className="events-title">Events</h2>
           <div className='calendar-widget'>
             <CalendarWidget/>
           </div>

@@ -35,9 +35,10 @@
 }
 
 .calendar-widget{
-    width: 100%;
+    width: 90%;
     margin-left: 50px;
     margin-top: 30px;
+   
 
 }
 
@@ -45,3 +46,22 @@
     margin-left: 50px;
 
 }
+
+.twitter-title{
+    margin-left: 50px;
+    margin-top: 40px;
+
+}
+
+.events-title{
+    margin-left: 50px;
+    margin-top: 40px;
+
+}
+
+.main-container {
+    margin-top: 0px;
+    margin-bottom: 0px;
+   
+    margin-left: 0px;
+  }
