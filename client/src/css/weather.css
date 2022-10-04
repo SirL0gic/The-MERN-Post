@@ -1,5 +1,7 @@
 .w-widget{
     width: 60%;
-    margin-left: 130px;
+    margin-left: 40px;
     margin-top: 70px;
+    border: 2px;
+    border-style: solid;
 }

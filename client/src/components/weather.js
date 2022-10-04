@@ -1,5 +1,5 @@
 import ReactWeather from "react-open-weather-widget";
-import "react-open-weather-widget/lib/css/ReactWeather.css";
+// import "react-open-weather-widget/lib/css/ReactWeather.css";
 import '../css/weather.css'
 
 
@@ -13,7 +13,6 @@ import '../css/weather.css'
 
 export default function WeatherWidget() {
     return (
-        
       <div className="w-widget">
         <ReactWeather
           forecast="today"

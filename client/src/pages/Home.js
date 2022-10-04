@@ -20,9 +20,11 @@ import Header from '../components/Head';
 import DateTime from '../components/Date';
 import NewsCard from '../components/News'
 import WeatherWidget from "../components/weather";
+import {TwitterTweetEmbed } from 'react-twitter-embed';
 
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
+
 
 //Custom css
 import '../css/custom.css'
@@ -60,13 +62,15 @@ let HomePage = () => {
                         <br></br>
                         <br></br>
                         <NewsCard />
+                        <br></br>
+                        <br></br>
+                        <NewsCard />
                     </div>
                 </Col>
 
                 <Col lg={4}>
-                    <div>
-                        <WeatherWidget />
-                    </div>
+                <WeatherWidget />
+                <TwitterTweetEmbed tweetId={'933354946111705097'}/>
                 </Col>
             </Row>
 
