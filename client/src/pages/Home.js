@@ -1,11 +1,8 @@
 //Importing Hooks
-import React, {useState, useEffect } from "react";
+//import React, {useState, useEffect } from "react";
 
-//Extra css for BS
-import 'bootstrap/dist/css/bootstrap.min.css';
 
-// Bootstrap CSS
-import "bootstrap/dist/css/bootstrap.min.css";
+
 
 // Bootstrap Bundle JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
@@ -15,14 +12,19 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-//Custom css
-import '../css/custom.css'
+
 
 //Importing Components
 import NavBar from '../components/Nav';
 import Header from '../components/Head';
 import DateTime from '../components/Date';
 import NewsCard from '../components/News'
+
+// Bootstrap CSS
+import "bootstrap/dist/css/bootstrap.min.css";
+
+//Custom css
+import '../css/custom.css'
 
 
 let HomePage = () => {
@@ -51,16 +53,11 @@ let HomePage = () => {
             </Row>
 
             <Row>
-                <Col>
-                    <NewsCard />
-                </Col>
-            </Row>
-
-            <br />
-            
-            <Row>
-                <Col>
-                    <NewsCard />
+                <Col lg={12}>
+                    <div className="d-flex align-items-center justify-content-center">
+                        <NewsCard />
+                    </div>
+                    
                 </Col>
             </Row>
 
