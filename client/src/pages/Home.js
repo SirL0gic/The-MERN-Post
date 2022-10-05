@@ -55,6 +55,7 @@ let HomePage = () => {
         <Col lg={8}>
           <div className="news-area">
             <h1>News Feed</h1>
+            <br></br>
             <NewsCard />
             <br></br>
             <br></br>

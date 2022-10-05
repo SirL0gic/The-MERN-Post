@@ -1,5 +1,11 @@
 .title-heading {
     font-family: 'Seaweed Script';
+    font-size: 70px;
+}
+
+.date-area {
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .main-heading-area{
@@ -13,7 +19,7 @@
  .news-area{
     margin-left: 120px;
     margin-right: 50px;
-    margin-top: 70px;
+    margin-top: 50px;
  }
 
 .twitter-widget {
