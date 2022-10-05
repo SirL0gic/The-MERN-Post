@@ -17,7 +17,8 @@ import NewsCard from "../components/News";
 import WeatherWidget from "../components/weather";
 import {Tweet } from "react-twitter-widgets";
 import CalendarWidget from "../components/Calendar";
-import FooterComp from "../components/Footer";
+import AnimationNews from "../components/Animation";
+
 
 
 // Bootstrap CSS
@@ -50,7 +51,7 @@ let HomePage = () => {
             </div>
           </div>
           <div className="breaking-news">
-            <p className="text-center">breaking news</p>
+            <p className="text-center">{<AnimationNews />}</p>
           </div>
         </Col>
       </Row>
