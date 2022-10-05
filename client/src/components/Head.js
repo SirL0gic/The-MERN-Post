@@ -2,7 +2,7 @@
 let Header = () =>
 {
     return (
-        <h1>The MERN Post</h1>
+        <h1 className="title-heading">The Mern Post</h1>
     )
 } 
 
