@@ -2,8 +2,10 @@
 import React, { Component, useState, useEffect } from "react";
 
 //importing navigation
+//importing navigation
 import {Route, Routes } from "react-router-dom";
 
+//importing pages
 //importing pages
 import HomePage from "./pages/Home";
 import SportsPage from "./pages/Sports";
