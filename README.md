@@ -1,5 +1,5 @@
 # The-MERN-Post
-News website
+News website created using React + Node.js (Express). 
 F: 3000
 B: 5000
 
