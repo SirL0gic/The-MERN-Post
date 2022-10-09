@@ -1,7 +1,7 @@
 /* (A) FIXED WRAPPER */
 .hwrap {
     overflow: hidden; /* HIDE SCROLL BAR */
-    background: rgb(255, 0, 0);
+    background: rgb(177, 32, 32);
     color: black;
     font-weight: bold;
   }
