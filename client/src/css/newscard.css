@@ -11,6 +11,12 @@
   border-bottom-left-radius: calc(0.25rem - 1px);
 }
 
+.card-body {
+  padding: 0.5em 1.2em;
+  padding-bottom: 160px;
+  
+}
+
 @media only screen and (max-width: 768px) {
   a {
     display: none;
