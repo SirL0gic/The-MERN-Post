@@ -6,7 +6,7 @@
   font-weight: bold;
 }
 .card img {
-  width: 30%;
+  width: 40%;
   border-top-right-radius: 0;
   border-bottom-left-radius: calc(0.25rem - 1px);
 }
@@ -17,6 +17,7 @@
   }
   .card-body {
     padding: 0.5em 1.2em;
+    
   }
   .card-body .card-text {
     margin: 0;
@@ -31,6 +32,10 @@
 }
 @media only screen and (max-width: 1200px) {
   .card img {
-    width: 40%;
+    width: 50%;
+  }
+  .card-body {
+    padding: 0.5em 1.2em;
+    padding-bottom: 160px;
   }
 }
