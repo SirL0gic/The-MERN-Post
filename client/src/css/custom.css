@@ -1,82 +1,71 @@
 .title-heading {
-    font-family: 'Seaweed Script';
-    font-size: 70px;
+  font-family: "Seaweed Script";
+  font-size: 70px;
 }
 
 .date-area {
-    font-weight: bold;
-    font-size: 20px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
-.main-heading-area{
-    margin-top: 20px;
+.main-heading-area {
+  margin-top: 20px;
 }
 .no-col-nav {
-    padding: 0 !important;
-    margin: 0 !important;
- }
+  padding: 0 !important;
+  margin: 0 !important;
+}
 
- .news-area{
-    margin-left: 120px;
-    margin-right: 50px;
-    margin-top: 50px;
-
-    
- }
-
-
+.news-area {
+  margin-left: 120px;
+  margin-right: 50px;
+  margin-top: 50px;
+}
 
 .twitter-widget {
-    width: 60%;
-    margin-left: 50px;
-    margin-top: 30px;
+  width: 60%;
+  margin-left: 50px;
+  margin-top: 30px;
 }
 
-.weather-widget{
-    width: 60%;
-    margin-left: 50px;
-    margin-top: 30px;
+.weather-widget {
+  width: 60%;
+  margin-left: 50px;
+  margin-top: 30px;
 }
 
-.extra-container{
-    border-style: solid;
-    border-width: 1px;
-    border-right: 0px;
-    border-top: 0px;
-    border-bottom: 0px;
-    margin-top: 70px;
-    
+.extra-container {
+  border-style: solid;
+  border-width: 1px;
+  border-right: 0px;
+  border-top: 0px;
+  border-bottom: 0px;
+  margin-top: 70px;
 }
 
-.calendar-widget{
-    width: 90%;
-    margin-left: 50px;
-    margin-top: 30px;
-   
-
+.calendar-widget {
+  width: 90%;
+  margin-left: 50px;
+  margin-top: 30px;
 }
 
 .weather-title {
-    margin-left: 50px;
-
+  margin-left: 50px;
 }
 
-.twitter-title{
-    margin-left: 50px;
-    margin-top: 40px;
-
+.twitter-title {
+  margin-left: 50px;
+  margin-top: 40px;
 }
 
-.events-title{
-    margin-left: 50px;
-    margin-top: 40px;
-
+.events-title {
+  margin-left: 50px;
+  margin-top: 40px;
 }
 
 .main-container {
-    margin-top: 0px;
-    margin-bottom: 0px;
-   
-    margin-left: 0px;
-  }
+  margin-top: 0px;
+  margin-bottom: 0px;
 
+  margin-left: 0px;
+}

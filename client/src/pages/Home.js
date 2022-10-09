@@ -1,5 +1,5 @@
 //Importing Hooks
-import React, {useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 // Bootstrap Bundle JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
@@ -15,7 +15,7 @@ import Header from "../components/Head";
 import DateTime from "../components/Date";
 import NewsCard from "../components/News";
 import WeatherWidget from "../components/weather";
-import {Tweet } from "react-twitter-widgets";
+import { Tweet } from "react-twitter-widgets";
 import CalendarWidget from "../components/Calendar";
 import AnimationNews from "../components/Animation";
 
@@ -24,7 +24,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 //Custom css
 import "../css/custom.css";
-
 
 let HomePage = () => {
   return (
@@ -55,7 +54,6 @@ let HomePage = () => {
 
       <Row>
         <Col lg={8} className="news-container">
-            
           <div className="news-area">
             <h1>News Feed</h1>
             <br></br>
@@ -70,27 +68,24 @@ let HomePage = () => {
         </Col>
 
         <Col lg={4} className="extra-container">
-        <h3 className="weather-title">Weather</h3>
-        <div className="weather-widget">
-        <WeatherWidget />
-        </div>
-          
-        <h3 className="twitter-title">Latest Tweets</h3>
-          <div className='twitter-widget'>
+          <h3 className="weather-title">Weather</h3>
+          <div className="weather-widget">
+            <WeatherWidget />
+          </div>
+
+          <h3 className="twitter-title">Latest Tweets</h3>
+          <div className="twitter-widget">
             <Tweet tweetId="841418541026877441" />
           </div>
 
           <h3 className="events-title">Events</h3>
-          <div className='calendar-widget'>
-            <CalendarWidget/>
+          <div className="calendar-widget">
+            <CalendarWidget />
           </div>
-          
         </Col>
       </Row>
 
-      <Row>
-        
-      </Row>
+      <Row></Row>
     </Container>
   );
 };
