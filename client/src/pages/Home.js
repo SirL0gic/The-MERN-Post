@@ -41,7 +41,7 @@ let HomePage = () => {
       </Row>
 
       <Row>
-        <Col lg={12}>
+        <Col lg={12} className="no-col-nav">
           <div className="main-heading-area">
             <h1 className="text-center">{<Header />}</h1>
           </div>
