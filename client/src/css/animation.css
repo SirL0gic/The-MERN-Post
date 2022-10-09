@@ -1,7 +1,9 @@
 /* (A) FIXED WRAPPER */
 .hwrap {
     overflow: hidden; /* HIDE SCROLL BAR */
-    background: #eee;
+    background: rgb(255, 0, 0);
+    color: black;
+    font-weight: bold;
   }
    
   /* (B) MOVING TICKER WRAPPER */
