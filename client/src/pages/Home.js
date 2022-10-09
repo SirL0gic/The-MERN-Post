@@ -19,14 +19,11 @@ import {Tweet } from "react-twitter-widgets";
 import CalendarWidget from "../components/Calendar";
 import AnimationNews from "../components/Animation";
 
-
-
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 
 //Custom css
 import "../css/custom.css";
-
 
 
 let HomePage = () => {
