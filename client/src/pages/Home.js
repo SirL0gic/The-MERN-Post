@@ -18,6 +18,7 @@ import WeatherWidget from "../components/weather";
 import { Tweet } from "react-twitter-widgets";
 import CalendarWidget from "../components/Calendar";
 import AnimationNews from "../components/Animation";
+import FooterComp from "../components/Footer";
 
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -86,7 +87,8 @@ let HomePage = () => {
       </Row>
 
       <Row>
-        <col lg={12} className="foooter-container">
+        <col lg={12} className="footer-container">
+
         </col>
       </Row>
     </Container>
