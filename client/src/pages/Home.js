@@ -88,7 +88,9 @@ let HomePage = () => {
       </Row>
 
       <Row>
+        <Col className="no-col-nav">
         <FooterComp />
+        </Col>
       </Row>
     </Container>
   );
