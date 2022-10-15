@@ -85,7 +85,10 @@ let HomePage = () => {
         </Col>
       </Row>
 
-      <Row></Row>
+      <Row>
+        <col lg={12} className="foooter-container">
+        </col>
+      </Row>
     </Container>
   );
 };
