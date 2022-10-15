@@ -25,6 +25,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 //Custom css
 import "../css/custom.css";
+import "../css/footer.css";
 
 let HomePage = () => {
   return (
@@ -87,9 +88,7 @@ let HomePage = () => {
       </Row>
 
       <Row>
-        <col lg={12} className="footer-container">
-            <FooterComp />
-        </col>
+        <FooterComp />
       </Row>
     </Container>
   );
