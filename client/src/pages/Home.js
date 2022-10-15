@@ -88,7 +88,7 @@ let HomePage = () => {
 
       <Row>
         <col lg={12} className="footer-container">
-
+            <FooterComp />
         </col>
       </Row>
     </Container>
