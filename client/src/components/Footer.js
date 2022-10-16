@@ -8,7 +8,6 @@ let FooterComp = () => {
         <CDBBox display="flex" justifyContent="between" className="flex-wrap">
           <CDBBox>
             <a href="/" className="d-flex align-items-center p-0 text-dark">
-              
               <span className="ml-3 h5 font-weight-bold">The React Post</span>
             </a>
             <p className="my-3" style={{ width: '250px' }}>
