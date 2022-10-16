@@ -27,7 +27,7 @@ let FooterComp = () => {
           </CDBBox>
           <CDBBox>
             <p className="h5 mb-4" style={{ fontWeight: '600' }}>
-              Devwares
+              News
             </p>
             <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
               <CDBFooterLink href="/">Resources</CDBFooterLink>
