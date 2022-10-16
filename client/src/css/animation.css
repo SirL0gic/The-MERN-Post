@@ -1,8 +1,8 @@
 /* (A) FIXED WRAPPER */
 .hwrap {
   overflow: hidden; /* HIDE SCROLL BAR */
-  background: rgb(177, 32, 32);
-  color: black;
+  background: black;
+  color: white;
   font-weight: bold;
 }
 
