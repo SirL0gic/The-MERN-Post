@@ -9,11 +9,10 @@ let FooterComp = () => {
           <CDBBox>
             <a href="/" className="d-flex align-items-center p-0 text-dark">
               
-              <span className="ml-3 h5 font-weight-bold">Devwares</span>
+              <span className="ml-3 h5 font-weight-bold">The React Post</span>
             </a>
             <p className="my-3" style={{ width: '250px' }}>
-              We are creating High Quality Resources and tools to Aid developers during the
-              developement of their projects
+            The React Post is an Online daily newspaper published on the Internet. It is the most-widely circulated newspaper and has a large international audience. 
             </p>
             <CDBBox display="flex" className="mt-4">
               <CDBBtn flat color="dark">
@@ -44,8 +43,6 @@ let FooterComp = () => {
             </p>
             <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
               <CDBFooterLink href="/">Support</CDBFooterLink>
-              <CDBFooterLink href="/">Sign Up</CDBFooterLink>
-              <CDBFooterLink href="/">Sign In</CDBFooterLink>
             </CDBBox>
           </CDBBox>
           <CDBBox>
@@ -59,7 +56,7 @@ let FooterComp = () => {
             </CDBBox>
           </CDBBox>
         </CDBBox>
-        <small className="text-center mt-5">&copy; Devwares, 2020. All rights reserved.</small>
+        <small className="text-center mt-5">&copy; The React Post, 2022. All rights reserved.</small>
       </CDBBox>
     </CDBFooter>
   );
