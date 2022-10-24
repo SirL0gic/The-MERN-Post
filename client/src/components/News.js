@@ -21,7 +21,7 @@ let NewsCard = () => {
           bulk of the card's content.
        
         </p>
-        <a href="#" class="btn btn-primary">
+        <a href="#" class="btn">
           Go somewhere
         </a>
       </div>

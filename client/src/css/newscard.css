@@ -3,6 +3,11 @@
   align-items: center;
 }
 
+.btn {
+  color: white;
+  background-color: black;
+}
+
 .card-title {
   font-weight: bold;
 }
