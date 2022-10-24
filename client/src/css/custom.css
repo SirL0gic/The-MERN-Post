@@ -16,6 +16,11 @@
   margin: 0 !important;
 }
 
+.footer-col {
+  margin-top: 40px;
+  padding: 0 !important;
+}
+
 .news-area {
   margin-left: 120px;
   margin-right: 50px;

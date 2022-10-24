@@ -6,7 +6,7 @@
   font-weight: bold;
 }
 .card img {
-  width: 40%;
+  width: 60%;
   border-top-right-radius: 0;
   border-bottom-left-radius: calc(0.25rem - 1px);
 }
