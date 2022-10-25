@@ -3,15 +3,7 @@
   align-items: center;
 }
 
-.btn {
-  color: white;
-  background-color: black;
-}
 
-.btn:hover {
-  background-color: #4CAF50;
-  color: white;
-}
 
 .card-title {
   font-weight: bold;
