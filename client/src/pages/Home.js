@@ -76,7 +76,7 @@ let HomePage = () => {
 
           <h3 className="twitter-title">Latest Tweets</h3>
           <div className="twitter-widget">
-            <Tweet tweetId="841418541026877441" />
+            <Tweet tweetId="1586484282423496704" />
           </div>
 
           <h3 className="events-title">Events</h3>
