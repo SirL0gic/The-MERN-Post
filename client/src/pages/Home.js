@@ -58,7 +58,7 @@ let HomePage = () => {
           <div className="news-area">
             <h1>News Feed</h1>
             <br></br>
-            <NewsCard title="Elon Musk planned Twitter layoffs are imminent" mini="Elon Musks plans to lay off large number of Twitter employees are getting underway, a course of action that could prompt fundamental changes in the way more than 200 million daily users experience the site." image="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/WKECRV6SQ6EZHD4KAUXNIPE3VM.JPG&w=916" />
+            <NewsCard title="Elon Musk planned Twitter layoffs are imminent" author="Gerrit De Vynck" mini="Elon Musks plans to lay off large number of Twitter employees are getting underway, a course of action that could prompt fundamental changes in the way more than 200 million daily users experience the site." image="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/WKECRV6SQ6EZHD4KAUXNIPE3VM.JPG&w=916" />
             <br></br>
             <br></br>
             <NewsCard />
