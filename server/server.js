@@ -2,7 +2,7 @@ const express = require("express");
 const { restart } = require("nodemon");
 const app = express();
 
-/get request
+//get request
 app.get("/api", (req, res) => {
     res.json({"users":["user1","user2","user3"]})
   });
