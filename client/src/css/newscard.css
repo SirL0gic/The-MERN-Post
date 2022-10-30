@@ -20,6 +20,32 @@
   padding-bottom: 160px;
 
 }
+@media only screen and (max-width: 390px) {
+  a {
+    display: none;
+  }
+
+  .card-body {
+    padding: 0.5em 1.2em;
+
+  }
+
+  .card-body .card-text {
+    margin: 0;
+  }
+
+  .card img {
+    width: 70%;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: center;
+    width: 130%;
+    margin-left: -50px;
+    text-align: center;
+  }
+}
 
 @media only screen and (max-width: 768px) {
   a {
