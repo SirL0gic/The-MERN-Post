@@ -8,10 +8,12 @@ let NewsCard = (props) => {
       <img
         src={props.image}
         class="card-img-top"
+        id="new-imgg"
       />
       <div class="card-body">
         <h4 class="card-title">{props.title}</h4>
         <p class="card-text">By: {props.author}</p>
+        <br></br>
         <p class="card-text">
         {props.mini}
         </p>

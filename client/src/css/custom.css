@@ -1,3 +1,12 @@
+@media only screen and (max-width: 390px) {
+  .weather-widget {
+    display: none;
+  }
+  .weather-title{
+    display: none;
+  }
+
+}
 .title-heading {
   font-family: "Seaweed Script";
   font-size: 70px;

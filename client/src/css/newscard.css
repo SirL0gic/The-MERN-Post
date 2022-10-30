@@ -44,10 +44,13 @@
     width: 130%;
     margin-left: -50px;
     text-align: center;
-    height: 600px;
+    height: 700px;
   }
   #linker {
     margin-top: 20px;
+  }
+  #new-imgg {
+    width: 100%;
   }
 }
 
