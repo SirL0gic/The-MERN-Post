@@ -64,7 +64,7 @@ let HomePage = () => {
             <NewsCard title="Russia pauses grain deal after Ukraine strikes warships in Crimea" author="Mary Ilyushina" mini="Russia suspended its participation in the U.N.-brokered deal that allowed Ukraine to export its grain and other agricultural products from Black Sea ports after claiming that Kyiv used the corridor to attack Kremlin ships, reigniting concerns about global food insecurity." image="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/KNNJEFH4DFY3QFHPLNPWL7LFAE.jpg&w=916" />
             <br></br>
             <br></br>
-            <NewsCard title="Inside Google’s new Halloween-themed playable Doodle" author="" />
+            <NewsCard title="Inside Google new Halloween-themed playable Doodle" author="" mini="" image="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/EKTPQI3ZQNEC7K5UB6DKDMDT5Y.jpg" />
           </div>
         </Col>
 
