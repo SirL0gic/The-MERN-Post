@@ -5,6 +5,17 @@
   .weather-title{
     display: none;
   }
+  .react-calendar{
+    width: 85%;
+  }
+  .twitter-widget-0{
+    width:100%;
+
+  }
+  #rem{
+    display: none;
+  }
+  
 
 }
 .title-heading {

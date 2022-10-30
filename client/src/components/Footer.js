@@ -26,7 +26,7 @@ let FooterComp = () => {
             </CDBBox>
           </CDBBox>
           <CDBBox>
-            <p className="h5 mb-4" style={{ fontWeight: '600' }}>
+            <p className="h5 mb-4" id='rem' style={{ fontWeight: '600' }}>
               News
             </p>
             <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
@@ -37,7 +37,7 @@ let FooterComp = () => {
             </CDBBox>
           </CDBBox>
           <CDBBox>
-            <p className="h5 mb-4" style={{ fontWeight: '600' }}>
+            <p className="h5 mb-4" id='rem' style={{ fontWeight: '600' }}>
               Help
             </p>
             <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
@@ -45,7 +45,7 @@ let FooterComp = () => {
             </CDBBox>
           </CDBBox>
           <CDBBox>
-            <p className="h5 mb-4" style={{ fontWeight: '600' }}>
+            <p className="h5 mb-4" id='rem' style={{ fontWeight: '600' }}>
               Products
             </p>
             <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
