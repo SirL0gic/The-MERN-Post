@@ -8,7 +8,6 @@ let day = current_date.getDate();
 let final_date = day + "/" + month + "/" + year; 
 let time_zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-
 function DateTime() {
     return (
       <p>
