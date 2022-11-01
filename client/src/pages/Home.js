@@ -1,15 +1,15 @@
-//Importing Hooks
+//Importing-Hooks
 import React, { useState, useEffect } from "react";
 
-// Bootstrap Bundle JS
+// Bootstrap-Bundle-JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-// Bootstrap npm lib
+// Bootstrap-npm-lib
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-//Importing Components..
+//Importing-Components..
 import NavBar from "../components/Nav";
 import Header from "../components/Head";
 import DateTime from "../components/Date";
