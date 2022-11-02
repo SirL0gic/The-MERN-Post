@@ -1,6 +1,8 @@
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 import '../css/newscard.css';
+import React from 'react';
+import {Link } from "react-router-dom";
 
 let NewsCard = (props) => {
   return (
@@ -17,8 +19,8 @@ let NewsCard = (props) => {
         <p class="card-text">
         {props.mini}
         </p>
-        <a href="#" class="btn btn-dark" id="linker">
-          Go somewhere
+        <a href="/sports" class="btn btn-dark" id="linker">
+          Read More
         </a>
       </div>
     </div>
