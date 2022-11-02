@@ -19,7 +19,7 @@ let NewsCard = (props) => {
         <p class="card-text">
         {props.mini}
         </p>
-        <a href="/sports" class="btn btn-dark" id="linker">
+        <a href={props.link} class="btn btn-dark" id="linker">
           Read More
         </a>
       </div>
