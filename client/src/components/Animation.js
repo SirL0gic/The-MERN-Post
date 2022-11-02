@@ -9,5 +9,4 @@ let AnimationNews = () => {
         </div>
     )
 }
-
 export default AnimationNews;
