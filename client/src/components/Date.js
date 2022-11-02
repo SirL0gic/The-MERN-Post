@@ -15,5 +15,4 @@ function DateTime() {
       </p>
     );
   }
-  
-  export default DateTime;
+export default DateTime;
