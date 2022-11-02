@@ -4,12 +4,10 @@ import 'react-calendar/dist/Calendar.css';
 
 function CalendarWidget() {
     const [value, onChange] = useState(new Date());
-  
     return (
       <div>
         <Calendar onChange={onChange} value={value} />
       </div>
     );
   }
-
-  export default Calendar;
+export default Calendar;
