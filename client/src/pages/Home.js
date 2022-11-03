@@ -79,8 +79,6 @@ let HomePage = () => {
             <Tweet tweetId="1586484282423496704" />
           </div>
 
-          
-
           <h3 className="events-title">Events</h3>
           <div className="calendar-widget">
             <CalendarWidget />
