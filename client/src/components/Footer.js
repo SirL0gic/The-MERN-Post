@@ -62,3 +62,5 @@ let FooterComp = () => {
 };
 
 export default FooterComp;
+export default FooterComp;
+export default FooterComp;
