@@ -12,7 +12,7 @@ let FooterComp = () => {
             </a>
             <p className="my-3" style={{ width: '250px' }}>
             The React Post is an Online daily newspaper published on the Internet. It is the most-widely circulated newspaper and has a large international audience. 
-            The React Post is an Online daily newspaper published on the Internet. It is the most-widely circulated newspaper and has a large international audience. 
+            
             </p>
             <CDBBox display="flex" className="mt-4">
               <CDBBtn flat color="dark">
