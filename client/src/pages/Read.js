@@ -1,6 +1,9 @@
 //Importing-Hooks
 import React, { useState, useEffect } from "react";
 
+//importing navigation
+import {Route, Routes } from "react-router-dom";
+
 // Bootstrap-Bundle-JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
@@ -12,11 +15,15 @@ import Col from "react-bootstrap/Col";
 //Bootstrap-CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 
+//Importing-Components..
+import NavBar from "../components/Nav";
+
 let ReadPage = () => {
     return (
         <Container fluid className="main-container">
            <Row className="navigation-row">
             <Col lg={12} className="navigation-col-one">
+                <NavBar />
             </Col>
            </Row>
            <Row className="heading-row"></Row>
@@ -26,6 +33,6 @@ let ReadPage = () => {
 
 
     )
-};
+}
 
-export default Readpage;
+export default ReadPage;
