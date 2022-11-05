@@ -15,7 +15,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 let ReadPage = () => {
     return (
         <Container fluid className="main-container">
-           <Row className="navigation-row"></Row>
+           <Row className="navigation-row">
+            <Col lg={12} className="navigation-col-one">
+            </Col>
+           </Row>
            <Row className="heading-row"></Row>
            <Row className="new-article-row"></Row>
            <Row className="footer-row"></Row>
