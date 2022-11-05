@@ -14,9 +14,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 let ReadPage = () => {
     return (
+        <Container fluid className="main-container">
+           <Row className="navigation-area"></Row>
+           <Row className="heading-area"></Row>
+           <Row></Row>
+           <Row className="footer-area"></Row>
+
+        </Container>
 
 
     )
 };
 
-export default Readpage
+export default Readpage;
