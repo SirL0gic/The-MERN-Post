@@ -19,15 +19,16 @@ import FooterComp from "../components/Footer";
 //Custom-CSS
 import "../css/read.css";
 
-let ReadPage = () => {
+let ReadPage = (props) => {
     return (
         <Container fluid className="main-container">
            <Row className="navigation-row">
             <Col lg={12} className="navigation-col-one">
                 <NavBar />
             </Col>
+            {props.title}
            </Row>
-           
+
            <Row className="heading-row"></Row>
            <Row className="new-article-row"></Row>
 

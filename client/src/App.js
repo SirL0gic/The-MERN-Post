@@ -27,7 +27,7 @@ function App() {
     <Routes>
       <Route path="/" element={ <HomePage/> } />
       <Route path="sports" element={ <SportsPage/> } />
-      <Route path="read" element={ <Readpage/> } />
+      <Route path="read-elon" element={ <Readpage title="elon"/> } />
     </Routes>
     </div>
 
