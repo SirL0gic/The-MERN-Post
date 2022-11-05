@@ -1,6 +1,9 @@
-let Article = () => {
+
+
+let Article = (props) => {
     return(
-        <h1></h1>
+        <h1>{props.title}</h1>
+
     )
 
 };
