@@ -1,8 +1,5 @@
 //Importing-Hooks
-import React, { useState, useEffect } from "react";
-
-//importing navigation
-import {Route, Routes } from "react-router-dom";
+import React from "react";
 
 // Bootstrap-Bundle-JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
@@ -17,6 +14,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 //Importing-Components..
 import NavBar from "../components/Nav";
+import FooterComp from "../components/Footer";
+
+//Custom-CSS
+import "../css/read.css";
 
 let ReadPage = () => {
     return (
@@ -26,9 +27,15 @@ let ReadPage = () => {
                 <NavBar />
             </Col>
            </Row>
+           
            <Row className="heading-row"></Row>
            <Row className="new-article-row"></Row>
-           <Row className="footer-row"></Row>
+
+           <Row className="footer-row">
+           <Col lg={12} className="footer-col-one">
+           <FooterComp />
+            </Col>
+            </Row>
         </Container>
 
 
