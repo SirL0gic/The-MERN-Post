@@ -27,7 +27,9 @@ function App() {
     <Routes>
       <Route path="/" element={ <HomePage/> } />
       <Route path="sports" element={ <SportsPage/> } />
-      <Route path="read-elon" element={ <Readpage title="Elon Musk’s planned Twitter layoffs are imminent"/> } />
+      <Route path="read-elon" element={ <Readpage title="Elon Musk’s planned Twitter layoffs are imminent" 
+      subtitle="Tesla engineers were on-site Friday to evaluate the Twitter staff’s code, workers said, as anxiety built around Musk’s silence" 
+      date="October 29, 2022"/> } />
     </Routes>
     </div>
 

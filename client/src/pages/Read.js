@@ -44,10 +44,10 @@ let ReadPage = (props) => {
             <div className="new-article-container">
             <h1>{props.title}</h1>
             <h4>{props.subtitle}</h4>
-            <p>Date</p>
-            <p>Author</p>
-            <p>image</p>
-            <p>body</p>
+            <p>{props.date}</p>
+            <p>{props.author}</p>
+            <p>{props.image}</p>
+            <p>{props.body}</p>
             </div>
            
         </Col>
