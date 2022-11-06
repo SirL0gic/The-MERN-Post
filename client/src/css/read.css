@@ -13,6 +13,7 @@
 
     .para {
         width:fit-content;
+        font-size: large;
     }
 
     
@@ -47,6 +48,8 @@
 
 .para {
     width:fit-content;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
 }
 
 .para-container {
