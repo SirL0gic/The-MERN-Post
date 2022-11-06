@@ -35,6 +35,7 @@ let ReadPage = (props) => {
           <div className="text-center">
             <h1 className="text-center">{<Header />}</h1>
             <p className="date-display">{<DateTime />}</p>
+            <hr></hr>
           </div>
         </Col>
       </Row>
