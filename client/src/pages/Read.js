@@ -46,8 +46,7 @@ let ReadPage = (props) => {
             <h1 className="article-title">{props.title}</h1>
             <h4 className="article-sub-title">{props.subtitle}</h4>
             <br></br>
-            <p className="date-title">Date: {props.date}</p>
-            <p className="author-title">Author: {props.author}</p>
+            <p className="info-title">Published: {props.date} | By: {props.author}</p>
             <img
               className="news-img"
               src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/WKECRV6SQ6EZHD4KAUXNIPE3VM.JPG&w=916"
