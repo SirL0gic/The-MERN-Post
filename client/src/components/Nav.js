@@ -23,9 +23,6 @@ let NavBar = () => {
           <Link to="/entertainment">Entertainment</Link>
         </li>
         <li>
-          <Link to="/weather">Weather</Link>
-        </li>
-        <li>
           <Link to="/technology">Technology</Link>
         </li>
         <li>
