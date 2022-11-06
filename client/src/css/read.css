@@ -11,7 +11,7 @@
         width: 100%;
     }
 
-    .para-one {
+    .para {
         width:fit-content;
     }
 
@@ -45,7 +45,11 @@
    
 }
 
-.para-one {
+.para {
+    width:fit-content;
+}
+
+.para-container {
     width:fit-content;
     margin-top: 20px;
 }
