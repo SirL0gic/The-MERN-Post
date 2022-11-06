@@ -1,3 +1,17 @@
+@media only screen and (max-width: 390px) {
+    .new-article-container{
+        margin-top: 20px;
+        padding: 0 !important;
+        margin-left: 0 !important;
+       
+    }
+
+    .news-img{
+        width: 100%;
+    }
+
+    
+  }
 .navigation-col-one {
     padding: 0 !important;
     margin: 0 !important;
@@ -20,6 +34,8 @@
 
 .new-article-container{
     margin-top: 20px;
-    margin-left: 10%;
+    padding: 0 !important;
+    margin-left: 15%;
    
 }
+
