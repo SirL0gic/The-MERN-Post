@@ -57,3 +57,17 @@
     margin-top: 20px;
 }
 
+.article-title{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 55px;
+    font-weight: bold;
+    color:black;
+
+}
+
+.article-sub-title{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: gray;
+}
+
