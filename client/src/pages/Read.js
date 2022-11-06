@@ -48,6 +48,7 @@ let ReadPage = (props) => {
             <p>Date: {props.date}</p>
             <p>Author: {props.author}</p>
             <img className="news-img" src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/WKECRV6SQ6EZHD4KAUXNIPE3VM.JPG&w=916"></img>
+            <p className="para-one">SAN FRANCISCO — Elon Musk’s plans to lay off large number of Twitter employees are getting underway, a course of action that could prompt fundamental changes in the way more than 200 million daily users experience the site.</p>
             </div>
         </Col>
       </Row>

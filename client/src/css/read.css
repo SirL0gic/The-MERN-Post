@@ -3,11 +3,16 @@
         margin-top: 20px;
         padding: 0 !important;
         margin-left: 0 !important;
+        margin-right: 0 !important;
        
     }
 
     .news-img{
         width: 100%;
+    }
+
+    .para-one {
+        width:fit-content;
     }
 
     
@@ -35,7 +40,12 @@
 .new-article-container{
     margin-top: 20px;
     padding: 0 !important;
-    margin-left: 15%;
+    margin-left: 25%;
+    margin-right: 35%;
    
+}
+
+.para-one {
+    width:fit-content
 }
 
