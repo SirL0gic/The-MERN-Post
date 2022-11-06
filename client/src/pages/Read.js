@@ -28,7 +28,6 @@ let ReadPage = (props) => {
         <Col lg={12} className="navigation-col-one">
           <NavBar />
         </Col>
-        {props.title}
       </Row>
 
       <Row className="heading-row">
@@ -42,12 +41,15 @@ let ReadPage = (props) => {
 
       <Row className="new-article-row">
         <Col lg={12} className="news-article-col-one">
-            <h1>Title</h1>
-            <h2>Sub Title</h2>
+            <div className="new-article-container">
+            <h1>{props.title}</h1>
+            <h4>{props.subtitle}</h4>
             <p>Date</p>
             <p>Author</p>
             <p>image</p>
             <p>body</p>
+            </div>
+           
         </Col>
       </Row>
 

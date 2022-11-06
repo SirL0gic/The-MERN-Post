@@ -27,7 +27,7 @@ function App() {
     <Routes>
       <Route path="/" element={ <HomePage/> } />
       <Route path="sports" element={ <SportsPage/> } />
-      <Route path="read-elon" element={ <Readpage title="elon"/> } />
+      <Route path="read-elon" element={ <Readpage title="Elon Musk’s planned Twitter layoffs are imminent"/> } />
     </Routes>
     </div>
 
