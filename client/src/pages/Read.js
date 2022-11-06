@@ -44,10 +44,12 @@ let ReadPage = (props) => {
             <div className="new-article-container">
             <h1>{props.title}</h1>
             <h4>{props.subtitle}</h4>
-            <p>{props.date}</p>
-            <p>{props.author}</p>
-            <p>{props.image}</p>
-            <p>{props.body}</p>
+            <br></br>
+            <p>Date: {props.date}</p>
+            <p>Author: {props.author}</p>
+            <img src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/WKECRV6SQ6EZHD4KAUXNIPE3VM.JPG&w=916"></img>
+            <br></br>
+            <p>{props.paraone}</p>
             </div>
            
         </Col>
