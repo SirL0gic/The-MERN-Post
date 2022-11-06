@@ -34,9 +34,7 @@ function App() {
       date="October 29, 2022"
       author="Gerrit De Vynck"
       image="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/WKECRV6SQ6EZHD4KAUXNIPE3VM.JPG&w=916"
-      paraone="SAN FRANCISCO — Elon Musk’s plans to lay off large number of Twitter employees are getting underway, a course of action that could prompt fundamental changes in the way more than 200 million daily users experience the site."/>
-      
-      } />
+      />} />
     </Routes>
     </div>
 

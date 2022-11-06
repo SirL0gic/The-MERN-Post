@@ -48,10 +48,7 @@ let ReadPage = (props) => {
             <p>Date: {props.date}</p>
             <p>Author: {props.author}</p>
             <img src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/WKECRV6SQ6EZHD4KAUXNIPE3VM.JPG&w=916"></img>
-            <br></br>
-            <p>{props.paraone}</p>
             </div>
-           
         </Col>
       </Row>
 
