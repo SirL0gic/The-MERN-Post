@@ -81,8 +81,8 @@ function App() {
       parasix="“You want it to stay very strictly in the fun zone,” said Nate Swineheart, creative lead on the Google Doodle. “One of the initial proposals for a new level was to do an abandoned amusement park. The art for it was so cool and it was so fun, but it was a little on the line. And then we’re also kind of coming off of the pandemic and the idea of abandoned things is maybe not the most fun tone.”"
       paraseven="Despite the resemblances to older arcade games like “Snake” and “Pac-Man,” Google Doodle employees insisted that they were inspired by popular, more elaborate multiplayer games like Nintendo’s “Splatoon,” online battle arena game “League of Legends,” and indie adventure game “Journey.”"
       paraeight="Swineheart said Google’s Halloween Doodle mimics the far more complex progression system in “League” where players level up their champions, earn gold and buy items over time."
-      paranine=""
-      paranten=""
+      paranine="“When you collect 50 flames, you can go faster, then you can go through walls,” Swineheart said. “You get power boosted as you play, as a reward.”"
+      paranten="Swineheart said that having the chain of spirit flames grow longer and follow players around — making it easier for the opponent to steal them — was a mechanic inspired by the battle mode in “Splatoon 3,” where players can be followed around by a trail of clams. He said the “high risk, high reward” gameplay “balanced really well.”"
       />} />
     </Routes>
     </div>
