@@ -68,11 +68,11 @@ function App() {
 
 <Route path="read-google" 
       element={ <Readpage 
-      title="Russia pauses grain deal after Ukraine strikes warships in Crimea" 
-      subtitle="Russia suspended its participation in the U.N.-brokered deal" 
+      title="Inside Google’s new Halloween-themed playable Doodle" 
+      subtitle="It’s a version of a 2018 Doodle called “The Great Ghoul Duel” that was one of Google’s most popular." 
       date="October 29, 2022"
-      author="Mary Ilyushina"
-      image=""
+      author="Shannon Liao"
+      image="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/EKTPQI3ZQNEC7K5UB6DKDMDT5Y.jpg&w=1440"
       paraone="Russia suspended its participation in the U.N.-brokered deal that allowed Ukraine to export its grain and other agricultural products from Black Sea ports after claiming that Kyiv used the corridor to attack Kremlin ships, reigniting concerns about global food insecurity."
       paratwo="The Russian military accused Ukrainian forces of using drones to attack “military and civilian” ships near Sevastopol in Crimea in the early hours of Saturday, claiming that the strikes were carried out “with the participation of British experts."
       parathree="The Russian Foreign Ministry said separately that because of the attack it would “no longer guarantee the safety of civilian dry cargo ships participating in the Black Sea Grain Initiative and will suspend its implementation from today for an indefinite period.”"
