@@ -49,7 +49,7 @@ let ReadPage = (props) => {
             <p className="info-title">Published: {props.date} | By: {props.author}</p>
             <img
               className="news-img"
-              src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/WKECRV6SQ6EZHD4KAUXNIPE3VM.JPG&w=916"
+              src={props.image}
             ></img>
             <div className="para-container">
               <p className="para">{props.paraone}</p>
