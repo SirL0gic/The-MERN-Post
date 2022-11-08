@@ -19,7 +19,7 @@ function App() {
           path="read-elon"
           element={
             <Readpage
-              title="Elon Musk’s planned Twitter layoffs are imminent"
+              title="Elon Musk planned Twitter layoffs are imminent"
               subtitle="Tesla engineers were on-site Friday to evaluate the Twitter staff’s code, workers said, as anxiety built around Musk’s silence"
               date="October 29, 2022"
               author="Gerrit De Vynck"
@@ -65,14 +65,14 @@ function App() {
           path="read-google"
           element={
             <Readpage
-              title="Inside Google’s new Halloween-themed playable Doodle"
-              subtitle="It’s a version of a 2018 Doodle called “The Great Ghoul Duel” that was one of Google’s most popular."
+              title="Inside Googles new Halloween-themed playable Doodle"
+              subtitle="Its a version of a 2018 Doodle called “The Great Ghoul Duel” that was one of Google’s most popular."
               date="October 29, 2022"
               author="Shannon Liao"
               image="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/EKTPQI3ZQNEC7K5UB6DKDMDT5Y.jpg&w=1440"
               paraone="When people open Google.com, the tech company’s Doodle team has a few seconds to hook a visitor into engaging with their games, illustrations or historical facts. This Halloween, Google is inviting people to play an online multiplayer game akin to arcade and classic phone game “Snake.”"
               paratwo="Like “Snake,” the new Google Doodle lets players move across a map, amassing pixels that follow their character and grow longer. To join, anyone can click on the Doodle to form two teams of four players with other internet strangers and attempt to collect as many “spirit flames” as possible, using a mouse to move a little ghost around. As a twist, teams can steal flames from each other. After a two-minute time limit, the team with the most flames wins."
-              parathree="It’s a version of a 2018 Doodle called “The Great Ghoul Duel” that was one of Google’s most popular. This time, Google has added new maps, new characters and a new power-up. Players can earn little hats for their characters as achievements, too. The original plan was to bring back the Google Doodle in 2021, but it ended up getting delayed for a year. Googlers cited issues supporting the amount of people it expected to visit the site and play its multiplayer game."
+              parathree="Its a version of a 2018 Doodle called “The Great Ghoul Duel” that was one of Google’s most popular. This time, Google has added new maps, new characters and a new power-up. Players can earn little hats for their characters as achievements, too. The original plan was to bring back the Google Doodle in 2021, but it ended up getting delayed for a year. Googlers cited issues supporting the amount of people it expected to visit the site and play its multiplayer game."
               parafour="“It was just making sure that the servers were going to be reliable enough to launch for the huge amount of interest,” said Jacob Howcroft, lead engineer on the Google Doodle, in an interview with The Washington Post."
               parafive="Making a Halloween Google Doodle for the internet posed challenges besides server issues: Children use Google, too, so the Doodle couldn’t be too spooky or scary."
               parasix="“You want it to stay very strictly in the fun zone,” said Nate Swineheart, creative lead on the Google Doodle. “One of the initial proposals for a new level was to do an abandoned amusement park. The art for it was so cool and it was so fun, but it was a little on the line. And then we’re also kind of coming off of the pandemic and the idea of abandoned things is maybe not the most fun tone.”"
