@@ -1,13 +1,6 @@
 import ReactWeather from "react-open-weather-widget";
 import "react-open-weather-widget/lib/css/ReactWeather.css";
 
-//remove a certain class
-// const boxes = document.querySelectorAll('.rw-box-right');
-
-// boxes.forEach(box => {
-//   box.remove();
-// });
-
 export default function WeatherWidget() {
   return (
     <ReactWeather
