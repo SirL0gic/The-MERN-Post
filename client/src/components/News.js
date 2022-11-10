@@ -2,7 +2,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import '../css/newscard.css';
 import React from 'react';
-import {Link } from "react-router-dom";
 
 let NewsCard = (props) => {
   return (

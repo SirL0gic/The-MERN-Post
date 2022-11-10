@@ -1,10 +1,10 @@
 //Importing-Hooks
 import React from "react";
 
-// Bootstrap-Bundle-JS
+//Bootstrap-Bundle-JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-// Bootstrap-npm-lib
+//Bootstrap-npm-lib
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";

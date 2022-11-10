@@ -1,7 +1,7 @@
 //Importing-Hooks
 import React, { useState, useEffect } from "react";
 
-// Bootstrap-Bundle-JS
+//Bootstrap-Bundle-JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
 // Bootstrap-npm-lib
