@@ -1,12 +1,11 @@
-//bsic react hooks
+//Basic React hooks
 import React, { Component, useState, useEffect } from "react";
 
-//importing navigation
+//Importing navigation
 import { Route, Routes } from "react-router-dom";
 
-//importing pages
+//Importing pages
 import HomePage from "./pages/Home";
-import SportsPage from "./pages/Sports";
 import Readpage from "./pages/Read";
 
 function App() {
