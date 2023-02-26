@@ -1,7 +1,7 @@
 # The-React-Post
-News website created using React JS.
+News WebApp created using React JS.
 
-Video Demo: https://cdn.shopify.com/videos/c/o/v/31d857c9f9284a86b5fb496b2a4f4b1a.mp4
+Video Demo: https://1drv.ms/v/s!Apck3DEmMLfWihxii4hcayJXfowz?e=NLos4g
 
 
 ![alt text](https://i.imgur.com/n3K4Txa.png)
