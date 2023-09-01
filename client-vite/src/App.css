@@ -1,0 +1,29 @@
+/* Base styles for all devices. These will be the defaults. */
+body {
+    /* default styles here */
+}
+
+/* 1. Small Mobile Devices (Less than 480px) */
+@media only screen and (max-width: 479px) {
+    /* Small mobile styles here */
+}
+
+/* 2. Big Mobile Devices (Between 480px and 767px) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    /* Big mobile styles here */
+}
+
+/* 3. Tablets and iPads (Between 768px and 1023px) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Tablet styles here */
+}
+
+/* 4. Small Laptops (or large tablets, Between 1024px and 1366px) */
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+    /* Small laptop styles here */
+}
+
+/* 5. Big Laptops and Desktops (Greater than 1366px) */
+@media only screen and (min-width: 1367px) {
+    /* Big laptop and desktop styles here */
+}
