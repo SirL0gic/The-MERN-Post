@@ -1,12 +1,11 @@
-import React from 'react';
-import {Link } from "react-router-dom";
-import '../css/nav.css';
-
+import React from "react";
+import { Link } from "react-router-dom";
+import "../css/nav.css";
 
 let NavBar = () => {
-    return (
-        <div className='entire-nav'>
-        <ul>
+  return (
+    <div className="entire-nav">
+      <ul>
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -28,12 +27,9 @@ let NavBar = () => {
         <li>
           <Link to="/life">Life Style</Link>
         </li>
-        </ul>
-      </div>
-
-    );
-}
-
-
+      </ul>
+    </div>
+  );
+};
 
 export default NavBar;

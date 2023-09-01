@@ -1,4 +1,3 @@
-import React from "react";
 import { CDBFooter, CDBFooterLink, CDBBox, CDBBtn, CDBIcon } from "cdbreact";
 
 let FooterComp = () => {

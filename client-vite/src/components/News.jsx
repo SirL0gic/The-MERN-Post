@@ -1,7 +1,7 @@
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
-import '../css/newscard.css';
-import React from 'react';
+import "../css/newscard.css";
+import React from "react";
 
 let NewsCard = (props) => {
   return (
@@ -16,9 +16,7 @@ let NewsCard = (props) => {
         <h4 class="card-title">{props.title}</h4>
         <p class="card-text">By: {props.author}</p>
         <br></br>
-        <p class="card-text">
-        {props.mini}
-        </p>
+        <p class="card-text">{props.mini}</p>
         <a href={props.link} class="btn btn-dark" id="linker">
           Read More
         </a>

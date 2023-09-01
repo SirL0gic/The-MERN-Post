@@ -12,6 +12,10 @@ import CalendarWidget from "../components/Calendar";
 import AnimationNews from "../components/Animation";
 import FooterComp from "../components/Footer";
 
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../App.css";
+
+
 
 let HomePage = () =>{
     return (

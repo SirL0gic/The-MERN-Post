@@ -1,5 +1,3 @@
-import "../css/animation.css";
-
 let AnimationNews = () => {
     return(
         <div className="hwrap">
