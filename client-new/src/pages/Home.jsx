@@ -7,6 +7,7 @@ import Col from "react-bootstrap/Col";
 import NavBar from "../components/Nav";
 import Header from "../components/Head";
 import DateTime from "../components/Date";
+import AnimationNews from "../components/Animation";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
@@ -34,7 +35,7 @@ let HomePage = () => {
               </div>
             </div>
             <div className="breaking-news">
-              {/* <p className="text-center">{<AnimationNews />}</p> */}
+              <div className="text-center">{<AnimationNews />}</div>
             </div>
           </Col>
         </Row>
