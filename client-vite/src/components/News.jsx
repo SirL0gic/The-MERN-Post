@@ -1,8 +1,3 @@
-// Bootstrap CSS
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../css/newscard.css";
-import React from "react";
-
 let NewsCard = (props) => {
   return (
     <div class="card">
