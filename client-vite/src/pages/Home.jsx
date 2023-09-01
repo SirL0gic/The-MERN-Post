@@ -10,7 +10,7 @@ import WeatherWidget from "../components/weather";
 import { Tweet } from "react-twitter-widgets";
 import CalendarWidget from "../components/Calendar";
 import AnimationNews from "../components/Animation";
-import FooterComp from "../components/Footer";
+// import FooterComp from "../components/Footer";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
@@ -98,7 +98,7 @@ let HomePage = () => {
 
       <Row>
         <Col className="footer-col">
-          <FooterComp />
+          {/* <FooterComp /> */}
         </Col>
       </Row>
     </Container>
