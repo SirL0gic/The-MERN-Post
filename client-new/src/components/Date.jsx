@@ -1,18 +1,19 @@
-import LiveClock from "react-live-clock";
+import React, { useState, useEffect } from "react";
+import moment from "moment";
 
-let current_date = new Date();
-let year = current_date.getFullYear();
-let month = current_date.getMonth() + 1;
-let day = current_date.getDate();
-let final_date = day + "/" + month + "/" + year;
-let time_zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-function DateTime() {
-  return (
-    <p>
-      Date: {final_date} &nbsp; Time: <LiveClock format="hh:mm:ss a" ticking />{" "}
-      {" " + time_zone}
-    </p>
+let DateTime = () => {
+  const [currentTime, setCurrentTime] = useState(
+    moment().format("MMMM Do YYYY, h:mm:ss a")
   );
-}
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTime(moment().format("MMMM Do YYYY, h:mm:ss a"));
+    }, 1000); // Updates every second
+    return () => clearInterval(interval);
+  }, []);
+
+  return <> Date and Time: {currentTime}</>;
+};
 export default DateTime;

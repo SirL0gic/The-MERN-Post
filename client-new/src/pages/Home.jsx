@@ -30,7 +30,7 @@ let HomePage = () => {
             </div>
             <div className="date-area">
               <div className="text-center">
-                <p className="date-display">{<DateTime />}</p>
+                <time className="date-display">{<DateTime />}</time>
               </div>
             </div>
             <div className="breaking-news">
