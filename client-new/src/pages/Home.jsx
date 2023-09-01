@@ -11,16 +11,17 @@ import "../App.css";
 
 let HomePage = () => {
   return (
-  <Container  fluid className="main-container">
+    <main>
+      <Container fluid className="main-container">
         <Row>
-        <Col lg={12} className="no-col-nav">
-          <div className="text-center">
-            <NavBar />
-          </div>
-        </Col>
-      </Row>
-
-  </Container>
+          <Col lg={12} className="no-col-nav">
+            <div className="text-center">
+              <NavBar />
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </main>
   );
 };
 

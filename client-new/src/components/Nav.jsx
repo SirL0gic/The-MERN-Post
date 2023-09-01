@@ -3,7 +3,7 @@ import "../App.css";
 
 let NavBar = () => {
   return (
-    <div className="entire-nav">
+    <nav className="entire-nav">
       <ul>
         <li>
           <Link to="/">Home</Link>
@@ -27,7 +27,7 @@ let NavBar = () => {
           <Link to="/life">Life Style</Link>
         </li>
       </ul>
-    </div>
+    </nav>
   );
 };
 
