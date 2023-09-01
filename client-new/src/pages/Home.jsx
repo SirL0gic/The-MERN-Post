@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 
 import NavBar from "../components/Nav";
 import Header from "../components/Head";
-// import DateTime from "../components/Date";
+import DateTime from "../components/Date";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
@@ -23,23 +23,21 @@ let HomePage = () => {
           </Col>
         </Row>
 
-
         <Row>
-        <Col lg={12} className="no-col-nav">
-          <div className="main-heading-area">
-    <Header />
-          </div>
-          <div className="date-area">
-            <div className="text-center">
-              {/* <p className="date-display">{<DateTime />}</p> */}
+          <Col lg={12} className="no-col-nav">
+            <div className="main-heading-area">
+              <Header />
             </div>
-          </div>
-          <div className="breaking-news">
-            {/* <p className="text-center">{<AnimationNews />}</p> */}
-          </div>
-        </Col>
-      </Row>
-
+            <div className="date-area">
+              <div className="text-center">
+                <p className="date-display">{<DateTime />}</p>
+              </div>
+            </div>
+            <div className="breaking-news">
+              {/* <p className="text-center">{<AnimationNews />}</p> */}
+            </div>
+          </Col>
+        </Row>
       </Container>
     </main>
   );
