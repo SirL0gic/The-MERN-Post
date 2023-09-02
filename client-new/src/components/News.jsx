@@ -1,6 +1,3 @@
-import '../css/newscard.css';
-
-
 let NewsCard = (props) => {
   return (
     <div class="card">
@@ -14,9 +11,7 @@ let NewsCard = (props) => {
         <h4 class="card-title">{props.title}</h4>
         <p class="card-text">By: {props.author}</p>
         <br></br>
-        <p class="card-text">
-        {props.mini}
-        </p>
+        <p class="card-text">{props.mini}</p>
         <a href={props.link} class="btn btn-dark" id="linker">
           Read More
         </a>
