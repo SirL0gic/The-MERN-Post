@@ -159,6 +159,66 @@ li a {
   padding-bottom: 160px;
 }
 
+.navigation-col-one {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.footer-col-one {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.date-display {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.heading-row {
+  margin-top: 30px;
+}
+
+.new-article-container {
+  margin-top: 50px;
+  padding: 0 !important;
+  margin-left: 25%;
+  margin-right: 35%;
+}
+
+.para {
+  width: fit-content;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: larger;
+}
+
+.para-container {
+  width: fit-content;
+  margin-top: 20px;
+}
+
+.article-title {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 55px;
+  font-weight: bold;
+  color: black;
+}
+
+.article-sub-title {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: gray;
+}
+
+.info-title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.news-img {
+  width: 100%;
+}
+
 /* 1. Small Mobile Devices (Less than 480px) */
 @media only screen and (max-width: 479px) {
   /* Small mobile styles here */
@@ -207,6 +267,21 @@ li a {
   }
   #new-imgg {
     width: 100%;
+  }
+  .new-article-container {
+    margin-top: 20px;
+    padding: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .news-img {
+    width: 100%;
+  }
+
+  .para {
+    width: fit-content;
+    font-size: large;
   }
 }
 
