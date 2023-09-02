@@ -59,6 +59,7 @@
 
 .weather-title {
   margin-left: 50px;
+  margin-top: 40px;
 }
 
 .twitter-title {
@@ -218,18 +219,26 @@ li a {
   width: 100%;
 }
 
-#root > main > div > div:nth-child(3) > div.extra-container.col-lg-4 > div.weather-widget > section > div > div > div {
+#root
+  > main
+  > div
+  > div:nth-child(3)
+  > div.extra-container.col-lg-4
+  > div.weather-widget
+  > section
+  > div
+  > div
+  > div {
   width: 80% !important;
 }
 
 /* 1. Small Mobile Devices (Less than 480px) */
 @media only screen and (max-width: 479px) {
   /* Small mobile styles here */
-  .weather-widget {
-    display: none;
-  }
+
   .weather-title {
-    display: none;
+
+    margin-top: 40px;
   }
   .react-calendar {
     width: 85%;
