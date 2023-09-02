@@ -142,7 +142,6 @@ li a {
   animation-play-state: paused;
 }
 
-
 .card {
   flex-direction: row;
   align-items: center;
@@ -185,7 +184,6 @@ li a {
 
   .card-body {
     padding: 0.5em 1.2em;
-
   }
 
   .card-body .card-text {
@@ -221,7 +219,6 @@ li a {
 
   .card-body {
     padding: 0.5em 1.2em;
-
   }
 
   .card-body .card-text {
