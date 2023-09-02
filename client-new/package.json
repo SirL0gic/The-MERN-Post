@@ -12,12 +12,14 @@
   "dependencies": {
     "bootstrap": "^5.3.1",
     "cdbreact": "^1.5.18",
+    "mdb-react-ui-kit": "^6.2.0",
     "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-calendar": "^4.6.0",
     "react-dom": "^18.2.0",
     "react-live-clock": "^6.0.6",
+    "react-open-weather-widget": "^1.1.0",
     "react-router-dom": "^6.15.0",
     "react-twitter-widgets": "^1.11.0"
   },
