@@ -9,7 +9,7 @@ import Header from "../components/Head";
 import DateTime from "../components/Date";
 import AnimationNews from "../components/Animation";
 import NewsCard from "../components/News";
-// import ApiExample from "../components/Weather";
+import Basic from "../components/weather";
 import { Tweet } from "react-twitter-widgets";
 import CalendarWidget from "../components/Calendar";
 // import FooterComp from "../components/Footer";
@@ -83,7 +83,7 @@ let HomePage = () => {
 
           <Col lg={4} className="extra-container">
             <h3 className="weather-title">Weather</h3>
-            <div className="weather-widget">{/* <ApiExample/> */}</div>
+            <div className="weather-widget"> <Basic/> </div>
 
             <h3 className="twitter-title">Latest Tweets</h3>
             <div className="twitter-widget">
