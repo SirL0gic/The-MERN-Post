@@ -9,6 +9,11 @@ import Header from "../components/Head";
 import DateTime from "../components/Date";
 import AnimationNews from "../components/Animation";
 import NewsCard from "../components/News";
+// import WeatherWidget from "../components/Weather";
+import { Tweet } from "react-twitter-widgets";
+import CalendarWidget from "../components/Calendar";
+// import FooterComp from "../components/Footer";
+
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
@@ -78,6 +83,8 @@ let HomePage = () => {
           </div>
         </Col>
         </Row>
+
+        
 
       </Container>
     </main>
