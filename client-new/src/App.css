@@ -1,6 +1,5 @@
 /* Base styles for all devices. These will be the defaults. */
 
-/* default styles here */
 .title-heading {
   font-family: "Seaweed Script";
   font-size: 70px;
@@ -15,6 +14,7 @@
 .main-heading-area {
   margin-top: 20px;
 }
+
 .no-col-nav {
   padding: 0 !important;
   margin: 0 !important;
@@ -25,11 +25,6 @@
   padding: 0 !important;
 }
 
-.news-area {
-  margin-left: 120px;
-  margin-right: 50px;
-  margin-top: 50px;
-}
 
 .twitter-widget {
   width: 60%;
@@ -42,14 +37,15 @@
   margin-top: 30px;
 }
 
-/* .extra-container {
+.extra-container {
   border-style: solid;
   border-width: 1px;
   border-right: 0px;
   border-top: 0px;
   border-bottom: 0px;
-  margin-top: 70px;
-} */
+  margin-top: 70px !important; 
+  margin-bottom: 70px !important; 
+}
 
 .calendar-widget {
   width: 90%;
@@ -142,22 +138,7 @@ li a {
   animation-play-state: paused;
 }
 
-.card {
-  flex-direction: row;
-  align-items: center;
-}
-.card-title {
-  font-weight: bold;
-}
-.card img {
-  width: 60%;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: calc(0.25rem - 1px);
-}
-.card-body {
-  padding: 0.5em 1.2em;
-  padding-bottom: 160px;
-}
+
 
 .navigation-col-one {
   padding: 0 !important;
@@ -232,6 +213,8 @@ li a {
   width: 80% !important;
 }
 
+
+
 /* 1. Small Mobile Devices (Less than 480px) */
 @media only screen and (max-width: 479px) {
   /* Small mobile styles here */
@@ -254,32 +237,15 @@ li a {
     display: none;
   }
 
-  .card-body {
-    padding: 0.5em 1.2em;
-  }
 
-  .card-body .card-text {
-    margin: 0;
-  }
-
-  .card img {
-    width: 70%;
-  }
-
-  .card {
-    flex-direction: column;
-    align-items: center;
-    width: 130%;
-    margin-left: -50px;
-    text-align: center;
-    height: 700px;
-  }
   #linker {
     margin-top: 20px;
   }
+
   #new-imgg {
     width: 100%;
   }
+
   .new-article-container {
     margin-top: 20px;
     padding: 0 !important;
@@ -304,35 +270,11 @@ li a {
     display: none;
   }
 
-  .card-body {
-    padding: 0.5em 1.2em;
-  }
-
-  .card-body .card-text {
-    margin: 0;
-  }
-
-  .card img {
-    width: 70%;
-  }
-
-  .card {
-    flex-direction: column;
-    align-items: center;
-  }
 }
 
 /* 3. Tablets and iPads (Between 768px and 1023px) */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   /* Tablet styles here */
-  .card img {
-    width: 50%;
-  }
-
-  .card-body {
-    padding: 0.5em 1.2em;
-    padding-bottom: 160px;
-  }
 }
 
 /* 4. Small Laptops (or large tablets, Between 1024px and 1366px) */

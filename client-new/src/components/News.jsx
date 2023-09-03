@@ -1,11 +1,11 @@
 let NewsCard = (props) => {
   return (
-    <div className="card">
+    <div className="card" style={{width:"80%"}}>
       <img
         src={props.image}
         className="card-img-top"
         id="new-imgg"
-        height={props.height}
+        // height={props.height}
       />
       <div className="card-body">
         <h4 className="card-title">{props.title}</h4>
