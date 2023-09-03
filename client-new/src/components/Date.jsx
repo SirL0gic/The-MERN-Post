@@ -14,6 +14,6 @@ let DateTime = () => {
     return () => clearInterval(interval);
   }, []);
 
-  return <> Date and Time: {currentTime}</>;
+  return <> {currentTime}</>;
 };
 export default DateTime;
