@@ -83,7 +83,10 @@ let HomePage = () => {
 
           <Col lg={4} className="extra-container">
             <h3 className="weather-title">Weather</h3>
-            <div className="weather-widget"> <Basic/> </div>
+            <div className="weather-widget">
+              {" "}
+              <Basic />{" "}
+            </div>
 
             <h3 className="twitter-title">Latest Tweets</h3>
             <div className="twitter-widget">
@@ -98,7 +101,10 @@ let HomePage = () => {
         </Row>
 
         <Row>
-          <Col className="footer-col"> <FooterComp /></Col>
+          <Col className="footer-col">
+            {" "}
+            <FooterComp />
+          </Col>
         </Row>
       </Container>
     </main>

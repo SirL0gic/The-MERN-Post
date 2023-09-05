@@ -217,7 +217,6 @@ li a {
   margin-top: 70px;
 }
 
-
 /* 1. Small Mobile Devices (Less than 480px) */
 @media only screen and (max-width: 479px) {
   /* Small mobile styles here */
