@@ -53,20 +53,21 @@
 }
 
 .weather-title {
-  text-align: center;
+  margin-left: 30px;
   font-size: 40px;
-
   margin-top: 30px;
 }
 
 .twitter-title {
-  text-align: center;
+  margin-left: 30px;
   font-size: 40px;
   margin-top: 60px;
 }
 
 .events-title {
+  margin-left: 30px;
   margin-top: 40px;
+  font-size: 40px;
 }
 
 .main-container {
@@ -294,6 +295,18 @@ li a {
   .events-title {
     font-size: 40px;
     text-align: center;
+  }
+
+  .weather-title {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 30px;
+  }
+
+  .twitter-title {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 60px;
   }
 }
 
