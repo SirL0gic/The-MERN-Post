@@ -75,18 +75,6 @@ export default function FooterComp() {
             href="#!"
             role="button"
           >
-            <MDBIcon fab className="fa-linkedin" />
-          </MDBBtn>
-
-          <MDBBtn
-            rippleColor="dark"
-            color="link"
-            floating
-            size="lg"
-            className="text-dark m-1"
-            href="#!"
-            role="button"
-          >
             <MDBIcon fab className="fa-github" />
           </MDBBtn>
         </section>

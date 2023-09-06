@@ -47,7 +47,6 @@ let HomePage = () => {
 
         <Row>
           <Col lg={8} className="news-container">
-      
             <div className="news-area">
               <h1 className="news-feed-title">News Feed</h1>
               <br></br>
@@ -80,7 +79,6 @@ let HomePage = () => {
                 image="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/EKTPQI3ZQNEC7K5UB6DKDMDT5Y.jpg&w=1440"
               />
             </div>
-        
           </Col>
 
           <Col lg={4} className="extra-container">
@@ -92,7 +90,9 @@ let HomePage = () => {
 
             <h3 className="twitter-title">Latest Tweets</h3>
             <div className="twitter-widget">
-              <Tweet tweetId="1586484282423496704" />
+           
+                <Tweet tweetId="1586484282423496704" />
+          
             </div>
 
             <h3 className="events-title">Events</h3>
@@ -105,8 +105,10 @@ let HomePage = () => {
         <Row>
           <Col className="footer-col">
             {" "}
-            <div className="footer-box">   <FooterComp /></div>
-         
+            <div className="footer-box">
+              {" "}
+              <FooterComp />
+            </div>
           </Col>
         </Row>
       </Container>
