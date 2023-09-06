@@ -14,16 +14,16 @@ export default function FooterComp() {
   return (
     <MDBFooter
       className="text-center text-white"
-      style={{ backgroundColor: "#f1f1f1" }}
+      style={{ backgroundColor: "black" }}
     >
       <MDBContainer className="pt-4">
         <section className="mb-4">
           <MDBBtn
-            rippleColor="dark"
+            rippleColor="light"
             color="link"
             floating
             size="lg"
-            className="text-dark m-1"
+            className="text-light m-1"
             href="#!"
             role="button"
           >
@@ -31,11 +31,11 @@ export default function FooterComp() {
           </MDBBtn>
 
           <MDBBtn
-            rippleColor="dark"
+            rippleColor="light"
             color="link"
             floating
             size="lg"
-            className="text-dark m-1"
+            className="text-light m-1"
             href="#!"
             role="button"
           >
@@ -43,11 +43,11 @@ export default function FooterComp() {
           </MDBBtn>
 
           <MDBBtn
-            rippleColor="dark"
+            rippleColor="light"
             color="link"
             floating
             size="lg"
-            className="text-dark m-1"
+            className="text-light m-1"
             href="#!"
             role="button"
           >
@@ -55,11 +55,11 @@ export default function FooterComp() {
           </MDBBtn>
 
           <MDBBtn
-            rippleColor="dark"
+            rippleColor="light"
             color="link"
             floating
             size="lg"
-            className="text-dark m-1"
+            className="text-light m-1"
             href="#!"
             role="button"
           >
@@ -67,11 +67,11 @@ export default function FooterComp() {
           </MDBBtn>
 
           <MDBBtn
-            rippleColor="dark"
+            rippleColor="light"
             color="link"
             floating
             size="lg"
-            className="text-dark m-1"
+            className="text-light m-1"
             href="#!"
             role="button"
           >
@@ -81,8 +81,8 @@ export default function FooterComp() {
       </MDBContainer>
 
       <div
-        className="text-center text-dark p-3"
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+        className="text-center text-light p-3"
+        style={{ backgroundColor: "black"}}
       >
         © 2023 The React Post
       </div>

@@ -6,7 +6,7 @@ import { Route, Routes } from "react-router-dom";
 
 //Importing pages
 import HomePage from "./pages/Home";
-import Readpage from "./pages/Read";
+import Readpage from "../../../client/src/pages/Read";
 
 function App() {
   return (
