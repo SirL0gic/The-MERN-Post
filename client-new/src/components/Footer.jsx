@@ -96,9 +96,9 @@ export default function FooterComp() {
         className="text-center text-dark p-3"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
       >
-        © 2020 Copyright:
+        © 2023 Copyright:
         <a className="text-dark" href="https://mdbootstrap.com/">
-          MDBootstrap.com
+          thereactpost.xyz
         </a>
       </div>
     </MDBFooter>

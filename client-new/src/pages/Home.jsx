@@ -105,7 +105,8 @@ let HomePage = () => {
         <Row>
           <Col className="footer-col">
             {" "}
-            <FooterComp />
+            <div className="footer-box">   <FooterComp /></div>
+         
           </Col>
         </Row>
       </Container>

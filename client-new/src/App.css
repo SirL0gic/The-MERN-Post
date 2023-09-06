@@ -48,22 +48,24 @@
 
 .calendar-widget {
   width: 100%;
-  margin-left: 10px;
+  margin-left: 50px;
   margin-top: 30px;
 }
 
 .weather-title {
-  margin-left: 50px;
+  text-align: center;
+  font-size: 40px;
+
   margin-top: 30px;
 }
 
 .twitter-title {
-  margin-left: 50px;
-  margin-top: 40px;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 60px;
 }
 
 .events-title {
-  margin-left: 50px;
   margin-top: 40px;
 }
 
@@ -208,11 +210,16 @@ li a {
   > div
   > div {
   width: 80% !important;
+  margin-right: 20px;
 }
 
 .news-area {
   margin-top: 70px;
   margin-left: 100px;
+}
+
+.footer-box {
+  margin-top: 80px;
 }
 
 /* 1. Small Mobile Devices (Less than 480px) */
@@ -222,9 +229,11 @@ li a {
   .weather-title {
     margin-top: 40px;
   }
+
   .react-calendar {
     width: 85%;
   }
+
   .twitter-widget-0 {
     width: 100%;
   }
@@ -234,6 +243,7 @@ li a {
     margin-left: 20px;
     margin-top: 30px;
   }
+
   #rem {
     display: none;
   }
@@ -273,6 +283,17 @@ li a {
 
   .card {
     width: 100% !important;
+  }
+
+  .calendar-widget {
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 30px;
+  }
+
+  .events-title {
+    font-size: 40px;
+    text-align: center;
   }
 }
 
