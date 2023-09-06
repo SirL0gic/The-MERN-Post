@@ -48,8 +48,8 @@
 }
 
 .calendar-widget {
-  width: 90%;
-  margin-left: 50px;
+  width: 100%;
+  margin-left: 10px;
   margin-top: 30px;
 }
 
@@ -231,6 +231,12 @@ li a {
   }
   .twitter-widget-0 {
     width: 100%;
+  }
+
+  .twitter-widget {
+    width: 90%;
+    margin-left: 20px;
+    margin-top: 30px;
   }
   #rem {
     display: none;
