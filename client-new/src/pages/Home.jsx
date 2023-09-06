@@ -49,7 +49,7 @@ let HomePage = () => {
           <Col lg={8} className="news-container">
       
             <div className="news-area">
-              <h1>News Feed</h1>
+              <h1 className="news-feed-title">News Feed</h1>
               <br></br>
               <NewsCard
                 title="Elon Musk planned Twitter layoffs are imminent"
