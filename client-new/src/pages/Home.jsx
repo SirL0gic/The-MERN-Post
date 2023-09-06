@@ -47,6 +47,7 @@ let HomePage = () => {
 
         <Row>
           <Col lg={8} className="news-container">
+      
             <div className="news-area">
               <h1>News Feed</h1>
               <br></br>
@@ -79,6 +80,7 @@ let HomePage = () => {
                 image="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/EKTPQI3ZQNEC7K5UB6DKDMDT5Y.jpg&w=1440"
               />
             </div>
+        
           </Col>
 
           <Col lg={4} className="extra-container">

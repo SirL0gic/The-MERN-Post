@@ -215,6 +215,7 @@ li a {
 
 .news-area {
   margin-top: 70px;
+  margin-left: 100px;
 }
 
 /* 1. Small Mobile Devices (Less than 480px) */
@@ -263,6 +264,17 @@ li a {
     width: fit-content;
     font-size: large;
   }
+
+
+.news-area {
+  margin-top: 70px;
+  margin-left: 0px;
+}
+
+.card {
+  width: 100% !important;
+}
+
 }
 
 /* 2. Big Mobile Devices (Between 480px and 767px) */
@@ -272,11 +284,24 @@ li a {
     display: none;
   }
 
+  .news-area {
+    margin-top: 70px;
+    margin-left: 0px;
+  }
+
+  .card {
+    width: 100% !important;
+  }
+
 }
 
 /* 3. Tablets and iPads (Between 768px and 1023px) */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   /* Tablet styles here */
+  .news-area {
+    margin-top: 70px;
+    margin-left: 0px;
+  }
 }
 
 /* 4. Small Laptops (or large tablets, Between 1024px and 1366px) */
