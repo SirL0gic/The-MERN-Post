@@ -25,7 +25,6 @@
   padding: 0 !important;
 }
 
-
 .twitter-widget {
   width: 60%;
   margin-left: 50px;
@@ -43,8 +42,8 @@
   border-right: 0px;
   border-top: 0px;
   border-bottom: 0px;
-  margin-top: 70px !important; 
-  margin-bottom: 70px !important; 
+  margin-top: 70px !important;
+  margin-bottom: 70px !important;
 }
 
 .calendar-widget {
@@ -138,8 +137,6 @@ li a {
   animation-play-state: paused;
 }
 
-
-
 .navigation-col-one {
   padding: 0 !important;
   margin: 0 !important;
@@ -223,7 +220,6 @@ li a {
   /* Small mobile styles here */
 
   .weather-title {
-
     margin-top: 40px;
   }
   .react-calendar {
@@ -245,7 +241,6 @@ li a {
   a {
     display: none;
   }
-
 
   #linker {
     margin-top: 20px;
@@ -271,16 +266,14 @@ li a {
     font-size: large;
   }
 
+  .news-area {
+    margin-top: 70px;
+    margin-left: 0px;
+  }
 
-.news-area {
-  margin-top: 70px;
-  margin-left: 0px;
-}
-
-.card {
-  width: 100% !important;
-}
-
+  .card {
+    width: 100% !important;
+  }
 }
 
 /* 2. Big Mobile Devices (Between 480px and 767px) */
@@ -298,7 +291,6 @@ li a {
   .card {
     width: 100% !important;
   }
-
 }
 
 /* 3. Tablets and iPads (Between 768px and 1023px) */
