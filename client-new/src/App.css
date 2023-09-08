@@ -85,7 +85,7 @@ body {
   margin-left: 0px;
 }
 
-ul {
+.nav-list-op {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -93,15 +93,15 @@ ul {
   background-color: black;
 }
 
-li {
+.nav-list-item {
   float: left;
 }
 
-li:last-child {
+.nav-list-item:last-child {
   border-right: none;
 }
 
-li a {
+.nav-list-item a {
   display: block;
   color: white;
   text-align: center;
