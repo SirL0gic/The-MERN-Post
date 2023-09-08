@@ -29,7 +29,6 @@ let HomePage = () => {
 
       const response = await axios.get("/api/news");
       setAllArticles(response.data);
-      
     } catch (error) {
       console.log(error);
     }
@@ -71,15 +70,13 @@ let HomePage = () => {
             <div className="news-area">
               <h1 className="news-feed-title">News Feed</h1>
               <br></br>
-              <ul>
-                {allArticles.map((item,index)=> {
+              <ul style={{ listStyle: "none" }}>
+                {allArticles.map((item, index) => {
                   return (
-      
                     <li key={index}>
-                      <NewsCard image={item.urlToImage}/>
+                      <NewsCard image={item.urlToImage} />
                     </li>
-       
-                  )
+                  );
                 })}
               </ul>
             </div>
