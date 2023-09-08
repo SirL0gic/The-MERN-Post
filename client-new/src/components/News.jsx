@@ -9,7 +9,8 @@ let NewsCard = (props) => {
       <div className="card-body">
         <h4 className="card-title">{props.title}</h4>
         <p className="card-text">By: {props.author}</p>
-        <p className="card-text">{props.mini}</p>
+        <p className="card-text">Date {props.date}</p>
+        <p className="card-text">{props.description}</p>
         <a href={props.link} className="btn btn-dark" id="linker">
           Read More
         </a>

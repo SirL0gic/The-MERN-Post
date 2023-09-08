@@ -26,20 +26,23 @@ app.get("/api/test", (req, res) => {
 app.get("/api/news", (req, res) => {
   // You must include at least one q, source, or domain
 
-  newsapi.v2
-    .everything({
-      q: "bitcoin",
-      sources: "bbc-news,the-verge",
-      domains: "bbc.co.uk, techcrunch.com",
-      from: "2023-08-10",
-      to: "2023-09-08",
-      language: "en",
-      sortBy: "relevancy",
-      page: 1,
-    })
-    .then((response) => {
-      console.log(response);
-    });
+
+});
+
+
+newsapi.v2
+.everything({
+//   q: "bitcoin",
+  sources: "bbc-news,the-verge",
+  domains: "bbc.co.uk, techcrunch.com",
+  from: "2023-08-10",
+  to: "2023-09-08",
+  language: "en",
+  sortBy: "relevancy",
+  page: 1,
+})
+.then((response) => {
+  console.log(response.totalResults);
 });
 
 app.listen(port, host, () => {

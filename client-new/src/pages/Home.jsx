@@ -18,6 +18,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
 
 let HomePage = () => {
+  const [allArticles, setAllArticles] = useState(null);
+
+  let getAllArticles = () => {
+    useEffect(() => {
+      return null;
+    }, []);
+  };
+
   return (
     <main>
       <Container fluid className="main-container">
