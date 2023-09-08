@@ -19,7 +19,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
 
 let HomePage = () => {
-  const [allArticles, setAllArticles] = useState(null);
+  const [allArticles, setAllArticles] = useState([]);
 
   let getAllArticles = async () => {
     try {
@@ -28,7 +28,8 @@ let HomePage = () => {
       axios.defaults.baseURL = dev_url;
 
       const response = await axios.get("/api/news");
-      setAllArticles(response);
+      setAllArticles(response.data);
+      
     } catch (error) {
       console.log(error);
     }
@@ -70,7 +71,17 @@ let HomePage = () => {
             <div className="news-area">
               <h1 className="news-feed-title">News Feed</h1>
               <br></br>
-              
+              <ul>
+                {allArticles.map((item,index)=> {
+                  return (
+      
+                    <li key={index}>
+                      <NewsCard image={item.urlToImage}/>
+                    </li>
+       
+                  )
+                })}
+              </ul>
             </div>
           </Col>
 

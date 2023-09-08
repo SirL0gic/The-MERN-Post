@@ -23,23 +23,37 @@ app.get("/api/test", (req, res) => {
 
 app.get("/api/news", (req, res) => {
   // You must include at least one q, source, or domain
-  newsapi.v2
-    .everything({
-      //   q: "bitcoin",
-      sources: "bbc-news,the-verge",
-      domains: "bbc.co.uk, techcrunch.com",
-      from: "2023-08-10",
-      to: "2023-09-08",
-      language: "en",
-      sortBy: "relevancy",
-      page: 1,
-    })
-    .then((response) => {
-        
-    var filter = response.articles.slice(0,5);
-    res.send(filter);
-    console.log(filter.length);
-    });
+//   newsapi.v2
+//     .everything({
+//       //   q: "bitcoin",
+//       sources: "bbc-news,the-verge",
+//       domains: "bbc.co.uk, techcrunch.com",
+//       from: "2023-08-10",
+//       to: "2023-09-08",
+//       language: "en",
+//       sortBy: "relevancy",
+//       page: 1,
+//     })
+//     .then((response) => {
+
+//     var filter = response.articles.slice(0,5);
+//     res.send(filter);
+//     console.log(filter.length);
+//     });
+
+    newsapi.v2.topHeadlines({
+        sources: 'the-verge,cnn,the-washington-post,tech-crunch',
+        language: 'en',
+      }).then(response => {
+        let all_articles = response.articles
+        for (every_article of all_articles) {
+            if (every_article.author || every_article.title || every_article.description || every_article.url || every_article.urlToImage || every_article.publishedAt || every_article.content == null){
+                all_articles.splice(all_articles.indexOf(every_article),1);
+            }
+        }
+        res.send(all_articles)
+      });
+
 });
 
 app.listen(port, host, () => {

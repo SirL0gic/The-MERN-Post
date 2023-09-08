@@ -232,6 +232,8 @@ body {
   margin-top: 80px;
 }
 
+
+
 /* 1. Small Mobile Devices (Less than 480px) */
 @media only screen and (max-width: 479px) {
   /* Small mobile styles here */
@@ -293,6 +295,7 @@ body {
 
   .card {
     width: 100% !important;
+    margin-bottom: 50px;
   }
 
   .calendar-widget {
@@ -333,6 +336,7 @@ body {
 
   .card {
     width: 100% !important;
+    margin-bottom: 50px;
   }
 }
 
@@ -346,6 +350,7 @@ body {
 
   .card {
     width: 100% !important;
+    margin-bottom: 50px;
   }
 
   .twitter-widget {

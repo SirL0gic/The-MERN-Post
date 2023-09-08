@@ -1,6 +1,6 @@
 let NewsCard = (props) => {
   return (
-    <div className="card" style={{width:"80%"}}>
+    <div className="card" style={{width:"80%", marginBottom:"50px"}}>
       <img
         src={props.image}
         className="card-img-top"
