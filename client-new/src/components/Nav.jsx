@@ -23,9 +23,6 @@ let NavBar = () => {
         <li>
           <Link to="/technology">Technology</Link>
         </li>
-        <li>
-          <Link to="/life">Life Style</Link>
-        </li>
       </ul>
     </nav>
   );
