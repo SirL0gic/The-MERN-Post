@@ -50,19 +50,20 @@ app.get("/api/news", (req, res) => {
       let all_articles = response.articles;
       for (every_article of all_articles) {
         if (
-          every_article.author ||
-          every_article.title ||
-          every_article.description ||
-          every_article.url ||
-          every_article.urlToImage ||
-          every_article.publishedAt ||
-          every_article.content == null
+            every_article.author === null ||
+            every_article.title === null ||
+            every_article.description === null ||
+            every_article.url === null ||
+            every_article.urlToImage === null ||
+            every_article.publishedAt === null ||
+            every_article.content === null
         ) {
           all_articles.splice(all_articles.indexOf(every_article), 1);
         }
       }
-      
+
       res.send(all_articles);
+      console.log(all_articles);
     });
 });
 
