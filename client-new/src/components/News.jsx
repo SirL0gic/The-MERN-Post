@@ -1,4 +1,17 @@
+import ShareImg from "../assets/share.png"
+
 let NewsCard = (props) => {
+
+  const copyToClipboard = (value) => {
+    const tempElement = document.createElement('textarea');
+    tempElement.value = value;
+    document.body.appendChild(tempElement);
+    tempElement.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempElement);
+    alert('Link copied to clipboard!');
+  };
+
   return (
     <div className="card" style={{ width: "80%", marginBottom: "50px" }}>
       <img src={props.image} className="card-img-top" id="new-imgg" />
@@ -14,6 +27,7 @@ let NewsCard = (props) => {
         <a href={props.link} className="btn btn-dark" id="linker">
           Read More
         </a>
+        <img className="share-img" src={ShareImg} width="25px" height="25px" alt="share-icon" style={{marginLeft:"20px"}} onClick={() => copyToClipboard(props.link)} />
       </div>
     </div>
   );

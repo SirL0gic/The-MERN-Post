@@ -1,16 +1,6 @@
-//Importing-Hooks
-import React from "react";
-
-//Bootstrap-Bundle-JS
-import "bootstrap/dist/js/bootstrap.bundle.min";
-
-//Bootstrap-npm-lib
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
-//Bootstrap-CSS
-import "bootstrap/dist/css/bootstrap.min.css";
 
 //Importing-Components..
 import NavBar from "../components/Nav";
