@@ -74,7 +74,7 @@ let HomePage = () => {
                 {allArticles.map((item, index) => {
                   return (
                     <li key={index}>
-                      <NewsCard image={item.urlToImage} />
+                      <NewsCard image={item.urlToImage} title={item.title} author={item.author} date={item.publishedAt.slice(0,10)} description={item.description} link={item.url} />
                     </li>
                   );
                 })}

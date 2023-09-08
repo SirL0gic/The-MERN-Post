@@ -61,6 +61,7 @@ app.get("/api/news", (req, res) => {
           all_articles.splice(all_articles.indexOf(every_article), 1);
         }
       }
+      
       res.send(all_articles);
     });
 });
