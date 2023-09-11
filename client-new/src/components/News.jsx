@@ -1,15 +1,16 @@
-import ShareImg from "../assets/share.png"
+import { Link } from "react-router-dom";
+import ShareImg from "../assets/share.png";
 
 let NewsCard = (props) => {
 
   const copyToClipboard = (value) => {
-    const tempElement = document.createElement('textarea');
+    const tempElement = document.createElement("textarea");
     tempElement.value = value;
     document.body.appendChild(tempElement);
     tempElement.select();
-    document.execCommand('copy');
+    document.execCommand("copy");
     document.body.removeChild(tempElement);
-    alert('Link copied to clipboard!');
+    alert("Link copied to clipboard!");
   };
 
   return (
@@ -24,10 +25,34 @@ let NewsCard = (props) => {
           <span style={{ fontWeight: "bold" }}>Date:</span> {props.date}
         </p>
         <p className="card-text">{props.description}</p>
-        <a href={props.link} className="btn btn-dark" id="linker">
-          Read More
-        </a>
-        <img className="share-img" src={ShareImg} width="25px" height="25px" alt="share-icon" style={{marginLeft:"20px"}} onClick={() => copyToClipboard(props.link)} />
+        <Link
+          to={{
+            pathname: `/article/${props.articleIndex}`,
+            state: {
+              article: {
+                image: props.image,
+                title: props.title,
+                author: props.author,
+                date: props.date,
+                description: props.description,
+                link: props.link,
+              },
+            },
+          }}
+        >
+          <button className="btn btn-dark" id="linker">
+            Read More
+          </button>
+        </Link>
+        <img
+          className="share-img"
+          src={ShareImg}
+          width="25px"
+          height="25px"
+          alt="share-icon"
+          style={{ marginLeft: "20px" }}
+          onClick={() => copyToClipboard(props.link)}
+        />
       </div>
     </div>
   );

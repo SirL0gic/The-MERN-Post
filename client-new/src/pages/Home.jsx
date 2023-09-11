@@ -30,6 +30,7 @@ let HomePage = () => {
 
       const response = await axios.get("/api/news");
       setAllArticles(response.data);
+      sessionStorage.setItem('articles', JSON.stringify(response.data));
     } catch (error) {
       console.log(error);
     }
@@ -75,7 +76,7 @@ let HomePage = () => {
                 {allArticles.map((item, index) => {
                   return (
                     <li key={index}>
-                      <NewsCard image={item.urlToImage} title={item.title} author={item.author} date={item.publishedAt.slice(0,10)} description={item.description} link={item.url} />
+                      <NewsCard articleIndex={index} image={item.urlToImage} title={item.title} author={item.author} date={item.publishedAt.slice(0,10)} description={item.description} link={item.url} />
                     </li>
                   );
                 })}
