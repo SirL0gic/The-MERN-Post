@@ -42,7 +42,7 @@ let ReadPage = () => {
             <img className="news-img" src={article.urlToImage}></img>
             <div className="para-container">
               <p className="para">{article.content.slice(0,200)}</p>
-              <a></a>
+              <a href={article.url}>Continue</a>
             </div>
           </div>
         </Col>

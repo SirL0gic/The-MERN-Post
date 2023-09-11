@@ -26,19 +26,7 @@ let NewsCard = (props) => {
         </p>
         <p className="card-text">{props.description}</p>
         <Link
-          to={{
-            pathname: `/article/${props.articleIndex}`,
-            state: {
-              article: {
-                image: props.image,
-                title: props.title,
-                author: props.author,
-                date: props.date,
-                description: props.description,
-                link: props.link,
-              },
-            },
-          }}
+          to={`/article/${props.articleIndex}`}
         >
           <button className="btn btn-dark" id="linker">
             Read More
