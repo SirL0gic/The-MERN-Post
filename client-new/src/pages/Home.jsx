@@ -30,7 +30,7 @@ let HomePage = () => {
 
       const response = await axios.get("/api/news");
       setAllArticles(response.data);
-      sessionStorage.setItem('articles', JSON.stringify(response.data));
+      sessionStorage.setItem('articles', JSON.stringify(response.data)); //setting storage
     } catch (error) {
       console.log(error);
     }
