@@ -2,14 +2,9 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-//Importing-Components..
 import NavBar from "../components/Nav";
-import FooterComp from "../components/Footer";
 import Header from "../components/Head";
 import DateTime from "../components/Date";
-
-//Custom-CSS
-import "../css/read.css";
 
 let ReadPage = (props) => {
   return (
@@ -36,22 +31,12 @@ let ReadPage = (props) => {
             <h1 className="article-title">{props.title}</h1>
             <h4 className="article-sub-title">{props.subtitle}</h4>
             <br></br>
-            <p className="info-title">Published: {props.date} | By: {props.author}</p>
-            <img
-              className="news-img"
-              src={props.image}
-            ></img>
+            <p className="info-title">
+              Published: {props.date} | By: {props.author}
+            </p>
+            <img className="news-img" src={props.image}></img>
             <div className="para-container">
-              <p className="para">{props.paraone}</p>
-              <p className="para">{props.paratwo}</p>
-              <p className="para">{props.parathree}</p>
-              <p className="para">{props.parafour}</p>
-              <p className="para">{props.parafive}</p>
-              <p className="para">{props.parasix}</p>
-              <p className="para">{props.paraseven}</p>
-              <p className="para">{props.paraeight}</p>
-              <p className="para">{props.paranine}</p>
-              <p className="para">{props.paraten}</p>
+              <p className="para">{props.content}</p>
             </div>
           </div>
         </Col>
