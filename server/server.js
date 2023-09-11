@@ -48,6 +48,7 @@ app.get("/api/news", (req, res) => {
     })
     .then((response) => {
       let all_articles = response.articles;
+      //for remvoing null articles
       for (every_article of all_articles) {
         if (
             every_article.author === null ||
@@ -58,7 +59,7 @@ app.get("/api/news", (req, res) => {
             every_article.publishedAt === null ||
             every_article.content === null
         ) {
-          all_articles.splice(all_articles.indexOf(every_article), 1);
+          all_articles.splice(all_articles.indexOf(every_article), 1); 
         }
       }
 
