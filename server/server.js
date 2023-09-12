@@ -2,6 +2,7 @@
 const express = require("express");
 const NewsAPI = require("newsapi");
 const dotenv = require("dotenv");
+const MongoClient = require("mongodb").MongoClient;
 
 //Backend Config
 const app = express();
@@ -12,6 +13,7 @@ const port = 4000;
 //Env variables
 dotenv.config();
 const newsapi = new NewsAPI(process.env.NEWSAPIKEY);
+const url = process.env.MONGODB_URI;
 
 //For cross orgin requests and Enable CORS for all routes.
 const cors = require("cors");
@@ -19,6 +21,34 @@ app.use(cors()); //use this for debuging
 
 app.get("/api/test", (req, res) => {
   res.send(`Server is running on ${host} at ${port}`);
+});
+
+app.get("/api/mongo-test", (req, res) => {
+  // Create a MongoClient with a MongoClientOptions object to set the Stable API version
+  const client = new MongoClient(url, {
+    serverApi: {
+      version: ServerApiVersion.v1,
+      strict: true,
+      deprecationErrors: true,
+    },
+  });
+  async function run() {
+    try {
+      // Connect the client to the server	(optional starting in v4.7)
+      await client.connect();
+      // Send a ping to confirm a successful connection
+      await client.db("admin").command({ ping: 2 });
+      console.log(
+        "Pinged your deployment. You successfully connected to MongoDB!"
+      );
+    } finally {
+      // Ensures that the client will close when you finish/error
+      await client.close();
+    }
+  }
+  run().catch(console.dir);
+
+  res.send("Check console");
 });
 
 app.get("/api/news", (req, res) => {
