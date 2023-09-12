@@ -28,7 +28,7 @@ let HomePage = () => {
       const production_url = "";
       axios.defaults.baseURL = dev_url;
 
-      const response = await axios.get("/api/news");
+      const response = await axios.get("/api/top-headlines");
       setAllArticles(response.data);
       sessionStorage.setItem("articles", JSON.stringify(response.data)); //setting storage
     } catch (error) {

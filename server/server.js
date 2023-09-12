@@ -2,7 +2,7 @@
 const express = require("express");
 const NewsAPI = require("newsapi");
 const dotenv = require("dotenv");
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion } = require("mongodb");
 
 //Backend Config
 const app = express();
@@ -81,15 +81,15 @@ app.get("/api/news", (req, res) => {
       //for remvoing null articles
       for (every_article of all_articles) {
         if (
-            every_article.author === null ||
-            every_article.title === null ||
-            every_article.description === null ||
-            every_article.url === null ||
-            every_article.urlToImage === null ||
-            every_article.publishedAt === null ||
-            every_article.content === null
+          every_article.author === null ||
+          every_article.title === null ||
+          every_article.description === null ||
+          every_article.url === null ||
+          every_article.urlToImage === null ||
+          every_article.publishedAt === null ||
+          every_article.content === null
         ) {
-          all_articles.splice(all_articles.indexOf(every_article), 1); 
+          all_articles.splice(all_articles.indexOf(every_article), 1);
         }
       }
 
@@ -97,11 +97,38 @@ app.get("/api/news", (req, res) => {
     });
 });
 
+app.get("/api/top-headlines", async (req, res) => {
+  const DATABASE_NAME = "News";
+  const COLLECTION_NAME = "top-news";
 
+  const client = new MongoClient(url, {
+    serverApi: {
+      version: ServerApiVersion.v1,
+      strict: true,
+      deprecationErrors: true,
+    },
+  });
 
-app.get('/api/run', async (req, res) => {
-  const DATABASE_NAME = 'News';
-const COLLECTION_NAME = 'top-news';
+  try {
+    await client.connect();
+
+    const db = client.db(DATABASE_NAME);
+    const collection = db.collection(COLLECTION_NAME);
+
+    const articles = await collection.find().toArray();
+
+    res.status(200).send(articles);
+    console.log("db working");
+  } catch (error) {
+    res.status(500).send("Error occurred: " + error.message);
+  } finally {
+    await client.close();
+  }
+});
+
+let script = async () => {
+  const DATABASE_NAME = "News";
+  const COLLECTION_NAME = "top-news";
   try {
     // Fetch articles from the news API
     const response = await newsapi.v2.topHeadlines({
@@ -112,8 +139,15 @@ const COLLECTION_NAME = 'top-news';
     let all_articles = response.articles;
 
     // Remove null articles
-    all_articles = all_articles.filter(every_article => 
-      every_article.author && every_article.title && every_article.description && every_article.url && every_article.urlToImage && every_article.publishedAt && every_article.content
+    all_articles = all_articles.filter(
+      (every_article) =>
+        every_article.author &&
+        every_article.title &&
+        every_article.description &&
+        every_article.url &&
+        every_article.urlToImage &&
+        every_article.publishedAt &&
+        every_article.content
     );
 
     const client = new MongoClient(url, {
@@ -137,14 +171,13 @@ const COLLECTION_NAME = 'top-news';
     await client.close();
 
     console.log("Articles inserted successfully!");
-    res.status(200).send('Articles fetched and stored successfully!');
   } catch (error) {
     if (error instanceof MongoClientError) {
       await client.close();
     }
-    res.status(500).send('Error occurred: ' + error.message);
+    console.log(error.message);
   }
-});
+};
 
 app.listen(port, host, () => {
   console.log("Server is now running on port", port);
