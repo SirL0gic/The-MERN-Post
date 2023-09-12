@@ -2,7 +2,7 @@
 const express = require("express");
 const NewsAPI = require("newsapi");
 const dotenv = require("dotenv");
-const MongoClient = require("mongodb").MongoClient;
+const { MongoClient, ServerApiVersion } = require('mongodb');
 
 //Backend Config
 const app = express();
@@ -94,7 +94,6 @@ app.get("/api/news", (req, res) => {
       }
 
       res.send(all_articles);
-      console.log(all_articles);
     });
 });
 
