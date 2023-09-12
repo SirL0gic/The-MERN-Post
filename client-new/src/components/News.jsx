@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import ShareImg from "../assets/share.png";
 
 let NewsCard = (props) => {
-
   const copyToClipboard = (value) => {
     const tempElement = document.createElement("textarea");
     tempElement.value = value;
@@ -25,9 +24,7 @@ let NewsCard = (props) => {
           <span style={{ fontWeight: "bold" }}>Date:</span> {props.date}
         </p>
         <p className="card-text">{props.description}</p>
-        <Link
-          to={`/article/${props.articleIndex}`}
-        >
+        <Link to={`/article/${props.articleIndex}`}>
           <button className="btn btn-dark" id="linker">
             Read More
           </button>

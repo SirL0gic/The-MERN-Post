@@ -232,8 +232,6 @@ body {
   margin-top: 80px;
 }
 
-
-
 /* 1. Small Mobile Devices (Less than 480px) */
 @media only screen and (max-width: 479px) {
   /* Small mobile styles here */
@@ -389,10 +387,10 @@ body {
 
 /* 4. Small Laptops (or large tablets, Between 1024px and 1366px) */
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {
-  /* Small laptop styles here */
+
 }
 
 /* 5. Big Laptops and Desktops (Greater than 1366px) */
 @media only screen and (min-width: 1367px) {
-  /* Big laptop and desktop styles here */
+  
 }
