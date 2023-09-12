@@ -97,6 +97,55 @@ app.get("/api/news", (req, res) => {
     });
 });
 
+
+
+app.get('/api/run', async (req, res) => {
+  const DATABASE_NAME = 'News';
+const COLLECTION_NAME = 'top-news';
+  try {
+    // Fetch articles from the news API
+    const response = await newsapi.v2.topHeadlines({
+      sources: "the-verge,cnn,the-washington-post,tech-crunch",
+      language: "en",
+    });
+
+    let all_articles = response.articles;
+
+    // Remove null articles
+    all_articles = all_articles.filter(every_article => 
+      every_article.author && every_article.title && every_article.description && every_article.url && every_article.urlToImage && every_article.publishedAt && every_article.content
+    );
+
+    const client = new MongoClient(url, {
+      serverApi: {
+        version: ServerApiVersion.v1,
+        strict: true,
+        deprecationErrors: true,
+      },
+    });
+
+    await client.connect();
+
+    const db = client.db(DATABASE_NAME);
+    const collection = db.collection(COLLECTION_NAME);
+
+    // Clear the collection for fresh data
+    await collection.deleteMany({});
+
+    // Insert the fetched articles into the MongoDB collection
+    await collection.insertMany(all_articles);
+    await client.close();
+
+    console.log("Articles inserted successfully!");
+    res.status(200).send('Articles fetched and stored successfully!');
+  } catch (error) {
+    if (error instanceof MongoClientError) {
+      await client.close();
+    }
+    res.status(500).send('Error occurred: ' + error.message);
+  }
+});
+
 app.listen(port, host, () => {
   console.log("Server is now running on port", port);
 });
