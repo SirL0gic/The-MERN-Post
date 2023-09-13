@@ -2,6 +2,7 @@
 const express = require("express");
 const NewsAPI = require("newsapi");
 const dotenv = require("dotenv");
+const axios = require("axios");
 const { MongoClient, ServerApiVersion } = require("mongodb");
 
 //Backend Config
@@ -14,7 +15,7 @@ const port = 4000;
 dotenv.config();
 const newsapi = new NewsAPI(process.env.NEWSAPIKEY);
 const url = process.env.MONGODB_URI;
-const weather_service_api = process.env
+const weather_service_api = process.env.WEATHERAPI;
 
 //For cross orgin requests and Enable CORS for all routes.
 const cors = require("cors");
@@ -22,7 +23,7 @@ app.use(cors()); //use this for debuging
 
 app.use(express.json()); // This is essential to parse incoming JSON payloads
 
-app.post("/api/weather", async (req, res) => {
+app.get("/api/weather", async (req, res) => {
     // Assuming the frontend sends IP address in the body with key 'ip'
     const ipAddress = req.body.ip;
 
@@ -32,7 +33,7 @@ app.post("/api/weather", async (req, res) => {
 
     try {
         // Fetch weather data using the weather API and the provided IP address
-        const weatherApiResponse = await axios.get(`http://api.weatherapi.com/v1/current.json?key=YOUR_API_KEY&q=${ipAddress}`);
+        const weatherApiResponse = await axios.get(`http://api.weatherapi.com/v1/current.json?key=${weather_service_api}&q=${ipAddress}`);
         
         // Extract the necessary weather data from the API response
         const weatherData = {
