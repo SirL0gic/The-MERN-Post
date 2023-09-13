@@ -20,7 +20,7 @@ export default function Basic() {
       const ipAddress = ipResponse.data.ip;
 
       // Send IP to your backend to get weather data
-      const weatherResponse = await axios.post(
+      const weatherResponse = await axios.get(
         "http://yourbackend.com/api/weather",
         { ip: ipAddress }
       );
