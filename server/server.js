@@ -51,25 +51,30 @@ app.get("/api/mongo-test", (req, res) => {
   res.send("Check console");
 });
 
-app.get("/api/news", (req, res) => {
-  // You must include at least one q, source, or domain
-  //   newsapi.v2
-  //     .everything({
-  //       //   q: "bitcoin",
-  //       sources: "bbc-news,the-verge",
-  //       domains: "bbc.co.uk, techcrunch.com",
-  //       from: "2023-08-10",
-  //       to: "2023-09-08",
-  //       language: "en",
-  //       sortBy: "relevancy",
-  //       page: 1,
-  //     })
-  //     .then((response) => {
 
-  //     var filter = response.articles.slice(0,5);
-  //     res.send(filter);
-  //     console.log(filter.length);
-  //     });
+app.get("/api/business-new", (re,res) => {
+    // You must include at least one q, source, or domain
+    newsapi.v2
+      .everything({
+        q: "bitcoin",
+        sources: "the-verge,cnn,the-washington-post,tech-crunch",
+        from: "2023-08-10",
+        to: "2023-09-08",
+        language: "en",
+        sortBy: "relevancy",
+        page: 1,
+      })
+      .then((response) => {
+
+      var filter = response.articles.slice(0,5);
+      res.send(filter);
+      console.log(filter.length);
+      });
+
+})
+
+app.get("/api/news", (req, res) => {
+
 
   newsapi.v2
     .topHeadlines({
