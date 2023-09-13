@@ -70,6 +70,34 @@ app.get("/api/mongo-test", (req, res) => {
   res.send("Check console");
 });
 
+app.get("/api/top-headlines", async (req, res) => {
+  const DATABASE_NAME = "News";
+  const COLLECTION_NAME = "top-news";
+
+  const client = new MongoClient(url, {
+    serverApi: {
+      version: ServerApiVersion.v1,
+      strict: true,
+      deprecationErrors: true,
+    },
+  });
+
+  try {
+    await client.connect();
+
+    const db = client.db(DATABASE_NAME);
+    const collection = db.collection(COLLECTION_NAME);
+
+    const articles = await collection.find().toArray();
+
+    res.status(200).send(articles);
+    console.log("db working");
+  } catch (error) {
+    res.status(500).send("Error occurred: " + error.message);
+  } finally {
+    await client.close();
+  }
+});
 
 app.get("/api/sports-news", (req, res) => {
   fetchCategoryNews('sports', res);
@@ -115,34 +143,6 @@ app.get("/api/technology-news", (req, res) => {
 //     });
 // });
 
-app.get("/api/top-headlines", async (req, res) => {
-  const DATABASE_NAME = "News";
-  const COLLECTION_NAME = "top-news";
-
-  const client = new MongoClient(url, {
-    serverApi: {
-      version: ServerApiVersion.v1,
-      strict: true,
-      deprecationErrors: true,
-    },
-  });
-
-  try {
-    await client.connect();
-
-    const db = client.db(DATABASE_NAME);
-    const collection = db.collection(COLLECTION_NAME);
-
-    const articles = await collection.find().toArray();
-
-    res.status(200).send(articles);
-    console.log("db working");
-  } catch (error) {
-    res.status(500).send("Error occurred: " + error.message);
-  } finally {
-    await client.close();
-  }
-});
 
 let script = async () => {
   const DATABASE_NAME = "News";
