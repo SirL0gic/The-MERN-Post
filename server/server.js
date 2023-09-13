@@ -52,25 +52,22 @@ app.get("/api/mongo-test", (req, res) => {
 });
 
 
-app.get("/api/business-new", (re,res) => {
-    // You must include at least one q, source, or domain
-    newsapi.v2
-      .everything({
-        q: "bitcoin",
-        sources: "the-verge,cnn,the-washington-post,tech-crunch",
-        from: "2023-08-10",
-        to: "2023-09-08",
-        language: "en",
-        sortBy: "relevancy",
-        page: 1,
-      })
-      .then((response) => {
-
+app.get("/api/business-news", (req, res) => {
+  newsapi.v2.topHeadlines({
+      category: 'business',
+      language: "en",
+      country: "us",
+      pageSize: 5
+  })
+  .then((response) => {
       var filter = response.articles.slice(0,5);
       res.send(filter);
       console.log(filter.length);
-      });
-
+  })
+  .catch((error) => {
+      console.error('Error fetching business news:', error);
+      res.status(500).send('Failed to fetch business news.');
+  });
 })
 
 app.get("/api/news", (req, res) => {
