@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 import NavBar from "../components/Nav";
 import Header from "../components/Head";
 import DateTime from "../components/Date";
+import FooterComp from "../components/Footer";
 
 let ReadPage = () => {
   let { id } = useParams(); // Get ID from URL
@@ -50,7 +51,7 @@ let ReadPage = () => {
 
       <Row className="footer-row">
         <Col lg={12} className="footer-col-one">
-          {/* <FooterComp /> */}
+          <FooterComp />
         </Col>
       </Row>
     </Container>
