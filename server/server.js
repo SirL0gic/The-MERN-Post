@@ -14,10 +14,40 @@ const port = 4000;
 dotenv.config();
 const newsapi = new NewsAPI(process.env.NEWSAPIKEY);
 const url = process.env.MONGODB_URI;
+const weather_service_api = process.env
 
 //For cross orgin requests and Enable CORS for all routes.
 const cors = require("cors");
 app.use(cors()); //use this for debuging
+
+app.use(express.json()); // This is essential to parse incoming JSON payloads
+
+app.post("/api/weather", async (req, res) => {
+    // Assuming the frontend sends IP address in the body with key 'ip'
+    const ipAddress = req.body.ip;
+
+    if (!ipAddress) {
+        return res.status(400).json({ error: "IP address is required" });
+    }
+
+    try {
+        // Fetch weather data using the weather API and the provided IP address
+        const weatherApiResponse = await axios.get(`http://api.weatherapi.com/v1/current.json?key=YOUR_API_KEY&q=${ipAddress}`);
+        
+        // Extract the necessary weather data from the API response
+        const weatherData = {
+            location: weatherApiResponse.data.location,
+            current: weatherApiResponse.data.current,
+        };
+
+        // Send weather data back to frontend
+        res.json(weatherData);
+
+    } catch (error) {
+        console.error("Error fetching weather data: ", error.message);
+        res.status(500).json({ error: "Failed to fetch weather data" });
+    }
+});
 
 
 let fetchCategoryNews = (category, res) => {
