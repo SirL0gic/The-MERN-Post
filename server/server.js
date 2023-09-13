@@ -19,6 +19,25 @@ const url = process.env.MONGODB_URI;
 const cors = require("cors");
 app.use(cors()); //use this for debuging
 
+
+let fetchCategoryNews = (category, res) => {
+  newsapi.v2.topHeadlines({
+      category: category,
+      language: "en",
+      country: "us",
+      pageSize: 1
+  })
+  .then((response) => {
+      var filter = response.articles.slice(0,5);
+      res.send(filter);
+      console.log(filter.length);
+  })
+  .catch((error) => {
+      console.error(`Error fetching ${category} news:`, error);
+      res.status(500).send(`Failed to fetch ${category} news.`);
+  });
+}
+
 app.get("/api/test", (req, res) => {
   res.send(`Server is running on ${host} at ${port}`);
 });
@@ -52,52 +71,49 @@ app.get("/api/mongo-test", (req, res) => {
 });
 
 
-app.get("/api/business-news", (req, res) => {
-  newsapi.v2.topHeadlines({
-      category: 'business',
-      language: "en",
-      country: "us",
-      pageSize: 5
-  })
-  .then((response) => {
-      var filter = response.articles.slice(0,5);
-      res.send(filter);
-      console.log(filter.length);
-  })
-  .catch((error) => {
-      console.error('Error fetching business news:', error);
-      res.status(500).send('Failed to fetch business news.');
-  });
-})
-
-app.get("/api/news", (req, res) => {
-
-
-  newsapi.v2
-    .topHeadlines({
-      sources: "the-verge,cnn,the-washington-post,tech-crunch",
-      language: "en",
-    })
-    .then((response) => {
-      let all_articles = response.articles;
-      //for remvoing null articles
-      for (every_article of all_articles) {
-        if (
-          every_article.author === null ||
-          every_article.title === null ||
-          every_article.description === null ||
-          every_article.url === null ||
-          every_article.urlToImage === null ||
-          every_article.publishedAt === null ||
-          every_article.content === null
-        ) {
-          all_articles.splice(all_articles.indexOf(every_article), 1);
-        }
-      }
-
-      res.send(all_articles);
-    });
+app.get("/api/sports-news", (req, res) => {
+  fetchCategoryNews('sports', res);
 });
+
+app.get("/api/food-news", (req, res) => {
+  fetchCategoryNews('health', res);  // Note: NewsAPI might not have a direct 'food' category. Adjust as needed.
+});
+
+app.get("/api/entertainment-news", (req, res) => {
+  fetchCategoryNews('entertainment', res);
+});
+
+app.get("/api/technology-news", (req, res) => {
+  fetchCategoryNews('technology', res);
+});
+
+// app.get("/api/news", (req, res) => {
+
+//   newsapi.v2
+//     .topHeadlines({
+//       sources: "the-verge,cnn,the-washington-post,tech-crunch",
+//       language: "en",
+//     })
+//     .then((response) => {
+//       let all_articles = response.articles;
+//       //for remvoing null articles
+//       for (every_article of all_articles) {
+//         if (
+//           every_article.author === null ||
+//           every_article.title === null ||
+//           every_article.description === null ||
+//           every_article.url === null ||
+//           every_article.urlToImage === null ||
+//           every_article.publishedAt === null ||
+//           every_article.content === null
+//         ) {
+//           all_articles.splice(all_articles.indexOf(every_article), 1);
+//         }
+//       }
+
+//       res.send(all_articles);
+//     });
+// });
 
 app.get("/api/top-headlines", async (req, res) => {
   const DATABASE_NAME = "News";
