@@ -44,7 +44,7 @@ export default function Basic() {
               <MDBCardBody className="p-4">
                 <div className="d-flex">
                   <MDBTypography tag="h6" className="flex-grow-1">
-                    Warsaw
+                    {weatheraData.city}
                   </MDBTypography>
                   <MDBTypography tag="h6">15:07</MDBTypography>
                 </div>

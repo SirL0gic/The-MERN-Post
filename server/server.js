@@ -59,6 +59,7 @@ app.get("/api/weather", async (req, res) => {
           country: data.location.country,
           city: data.location.name,
           temperatureInC: data.current.temp_c,
+          conditionText: data.current.condition.text,
           icon: data.current.condition.icon
         };
     
