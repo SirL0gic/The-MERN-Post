@@ -71,7 +71,7 @@ let HomePage = () => {
             <div className="news-area">
               <h1 className="news-feed-title">News Feed</h1>
               <br></br>
-              <ul style={{ listStyle: "none" }}>
+              <ul style={{ listStyle: "none", paddingLeft:"0px" }}>
                 {allArticles.map((item, index) => {
                   return (
                     <li key={index}>

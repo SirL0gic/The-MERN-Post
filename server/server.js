@@ -42,9 +42,7 @@ let fetchCategoryNews = (category, res) => {
 }
 
 app.post("/api/weather", async (req, res) => {
-    // Assuming the frontend sends IP address in the body with key 'ip'
     const ipAddress = req.body.ip;
-    console.log(req.body)
 
     if (!ipAddress) {
         return res.status(400).json({ error: "IP address is required" });
@@ -65,7 +63,7 @@ app.post("/api/weather", async (req, res) => {
         };
     
         res.json(result);
-        console.log("weather data sent")
+        console.log("Weather Data Sent")
 
     } catch (error) {
         console.error("Error fetching weather data: ", error.message);

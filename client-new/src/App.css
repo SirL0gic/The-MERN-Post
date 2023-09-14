@@ -238,6 +238,7 @@ body {
 
   .weather-title {
     margin-top: 40px;
+    margin-left: 0px;
   }
 
   .react-calendar {

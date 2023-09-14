@@ -47,7 +47,7 @@ export default function Basic() {
                   <MDBTypography tag="h6" className="flex-grow-1">
                     {weatheraData.city}
                   </MDBTypography>
-                  <MDBTypography tag="h6">15:07</MDBTypography>
+                  <MDBTypography tag="h6">{weatheraData.country}</MDBTypography>
                 </div>
 
                 <div className="d-flex flex-column text-center mt-5 mb-4">
@@ -60,6 +60,7 @@ export default function Basic() {
                   </MDBTypography>
                   <span className="small" style={{ color: "#868B94" }}>
                     {weatheraData.conditionText}
+                    <img height="30px" src={weatheraData.icon} alt="weather-icon"></img>
                   </span>
                 </div>
               </MDBCardBody>
