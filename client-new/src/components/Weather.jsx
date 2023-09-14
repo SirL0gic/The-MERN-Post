@@ -19,9 +19,10 @@ export default function Basic() {
       const ipResponse = await axios.get("https://api.ipify.org?format=json");
       const ipAddress = ipResponse.data.ip;
 
+
       // Send IP to your backend to get weather data
-      const weatherResponse = await axios.get(
-        "http://yourbackend.com/api/weather",
+      const weatherResponse = await axios.post(
+        "http://localhost:4000/api/weather",
         { ip: ipAddress }
       );
 
@@ -55,11 +56,10 @@ export default function Basic() {
                     className="display-4 mb-0 font-weight-bold"
                     style={{ color: "#1C2331" }}
                   >
-                    {" "}
-                    13°C{" "}
+                 {weatheraData.temperatureInC}&deg;C
                   </MDBTypography>
                   <span className="small" style={{ color: "#868B94" }}>
-                    Stormy
+                    {weatheraData.conditionText}
                   </span>
                 </div>
               </MDBCardBody>
