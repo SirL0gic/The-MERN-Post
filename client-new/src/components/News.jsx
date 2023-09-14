@@ -25,7 +25,7 @@ let NewsCard = (props) => {
         </p>
         <p className="card-text">{props.description}</p>
         <Link to={`/article/${props.articleIndex}`}>
-          <button className="btn btn-dark" id="linker">
+          <button className="btn btn-dark">
             Read More
           </button>
         </Link>

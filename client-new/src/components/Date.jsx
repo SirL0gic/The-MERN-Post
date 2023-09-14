@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment";
 
-
 let DateTime = () => {
   const [currentTime, setCurrentTime] = useState(
     moment().format("MMMM Do YYYY, h:mm:ss a")

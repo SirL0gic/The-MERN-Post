@@ -10,11 +10,11 @@ import {
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-export default function FooterComp() {
+let FooterComp = () => {
   return (
     <MDBFooter
       className="text-center text-white"
-      style={{ backgroundColor: "black", marginTop:"60px" }}
+      style={{ backgroundColor: "black", marginTop: "60px" }}
     >
       <MDBContainer className="pt-4">
         <section className="mb-4">
@@ -82,10 +82,12 @@ export default function FooterComp() {
 
       <div
         className="text-center text-light p-3"
-        style={{ backgroundColor: "black"}}
+        style={{ backgroundColor: "black" }}
       >
         © 2023 The React Post
       </div>
     </MDBFooter>
   );
-}
+};
+
+export default FooterComp;

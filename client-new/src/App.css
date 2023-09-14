@@ -259,14 +259,6 @@ body {
     display: none;
   }
 
-  a {
-    display: none;
-  }
-
-  #linker {
-    margin-top: 20px;
-  }
-
   #new-imgg {
     width: 100%;
   }
@@ -324,10 +316,6 @@ body {
 /* 2. Big Mobile Devices (Between 480px and 767px) */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   /* Big mobile styles here */
-  a {
-    display: none;
-  }
-
   .news-area {
     margin-top: 70px;
     margin-left: 0px;
