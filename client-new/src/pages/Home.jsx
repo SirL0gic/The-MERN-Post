@@ -39,6 +39,7 @@ let HomePage = () => {
     getAllArticles();
   }, []);
 
+
   return (
     <main>
       <Container fluid className="main-container">
