@@ -15,7 +15,6 @@ import { Tweet } from "react-twitter-widgets";
 import CalendarWidget from "../components/Calendar";
 import FooterComp from "../components/Footer";
 
-
 let HomePage = () => {
   const [allArticles, setAllArticles] = useState([]);
 

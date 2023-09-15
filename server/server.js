@@ -1,6 +1,6 @@
 //Imports
 const express = require("express");
-const compression = require('compression');
+const compression = require("compression");
 const NewsAPI = require("newsapi");
 const dotenv = require("dotenv");
 const axios = require("axios");
@@ -8,7 +8,7 @@ const { MongoClient, ServerApiVersion } = require("mongodb");
 
 //Backend Config
 const app = express();
-app.use(compression());  // Use compression middleware before all your other routes/middlewares
+app.use(compression()); // Use compression middleware before all your other routes/middlewares
 const host = "127.0.0.1";
 const public_host = "0.0.0.0";
 const port = 4000;
@@ -25,7 +25,6 @@ app.use(cors()); //use this for debuging
 
 app.use(express.json()); // This is essential to parse incoming JSON payloads
 
-
 let fetchCategoryNews = (category, res) => {
   newsapi.v2.topHeadlines({
       category: category,
@@ -34,7 +33,7 @@ let fetchCategoryNews = (category, res) => {
       pageSize: 1
   })
   .then((response) => {
-      var filter = response.articles.slice(0,5);
+      var filter = response.articles; //var filter = response.articles.slice(0,5);
       res.send(filter);
       console.log(filter.length);
   })
@@ -42,36 +41,37 @@ let fetchCategoryNews = (category, res) => {
       console.error(`Error fetching ${category} news:`, error);
       res.status(500).send(`Failed to fetch ${category} news.`);
   });
-}
+};
 
 app.post("/api/weather", async (req, res) => {
-    const ipAddress = req.body.ip;
+  const ipAddress = req.body.ip;
 
-    if (!ipAddress) {
-        return res.status(400).json({ error: "IP address is required" });
-    }
+  if (!ipAddress) {
+    return res.status(400).json({ error: "IP address is required" });
+  }
 
-    try {
-        // Fetch weather data using the weather API and the provided IP address
-        const weatherApiResponse = await axios.get(`http://api.weatherapi.com/v1/current.json?key=${weather_service_api}&q=${ipAddress}`);
-        
-        const data = weatherApiResponse.data;
+  try {
+    // Fetch weather data using the weather API and the provided IP address
+    const weatherApiResponse = await axios.get(
+      `http://api.weatherapi.com/v1/current.json?key=${weather_service_api}&q=${ipAddress}`
+    );
 
-        const result = {
-          country: data.location.country,
-          city: data.location.name,
-          temperatureInC: data.current.temp_c,
-          conditionText: data.current.condition.text,
-          icon: data.current.condition.icon
-        };
-    
-        res.json(result);
-        console.log("Weather Data Sent")
+    const data = weatherApiResponse.data;
 
-    } catch (error) {
-        console.error("Error fetching weather data: ", error.message);
-        res.status(500).json({ error: "Failed to fetch weather data" });
-    }
+    const result = {
+      country: data.location.country,
+      city: data.location.name,
+      temperatureInC: data.current.temp_c,
+      conditionText: data.current.condition.text,
+      icon: data.current.condition.icon,
+    };
+
+    res.json(result);
+    console.log("Weather Data Sent");
+  } catch (error) {
+    console.error("Error fetching weather data: ", error.message);
+    res.status(500).json({ error: "Failed to fetch weather data" });
+  }
 });
 
 app.get("/api/test", (req, res) => {
@@ -136,19 +136,19 @@ app.get("/api/top-headlines", async (req, res) => {
 });
 
 app.get("/api/sports-news", (req, res) => {
-  fetchCategoryNews('sports', res);
+  fetchCategoryNews("sports", res);
 });
 
 app.get("/api/food-news", (req, res) => {
-  fetchCategoryNews('health', res);  // Note: NewsAPI might not have a direct 'food' category. Adjust as needed.
+  fetchCategoryNews("health", res); // Note: NewsAPI might not have a direct 'food' category. Adjust as needed.
 });
 
 app.get("/api/entertainment-news", (req, res) => {
-  fetchCategoryNews('entertainment', res);
+  fetchCategoryNews("entertainment", res);
 });
 
 app.get("/api/technology-news", (req, res) => {
-  fetchCategoryNews('technology', res);
+  fetchCategoryNews("technology", res);
 });
 
 // app.get("/api/news", (req, res) => {
@@ -178,7 +178,6 @@ app.get("/api/technology-news", (req, res) => {
 //       res.send(all_articles);
 //     });
 // });
-
 
 let script = async () => {
   const DATABASE_NAME = "News";

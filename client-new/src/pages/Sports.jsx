@@ -24,7 +24,7 @@ let SportsPage = () => {
       const production_url = "";
       axios.defaults.baseURL = dev_url;
 
-      const response = await axios.get("/api/top-headlines");
+      const response = await axios.get("/api/sports-news");
       setAllArticles(response.data);
       sessionStorage.setItem("articles", JSON.stringify(response.data)); //setting storage
     } catch (error) {
