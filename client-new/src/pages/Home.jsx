@@ -16,7 +16,7 @@ import CalendarWidget from "../components/Calendar";
 import FooterComp from "../components/Footer";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../App.css";
+
 
 let HomePage = () => {
   const [allArticles, setAllArticles] = useState([]);

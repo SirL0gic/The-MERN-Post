@@ -9,6 +9,7 @@ import {
   MDBTypography,
 } from "mdb-react-ui-kit";
 
+
 let Basic = () => {
   const [weatheraData, setWeatherData] = useState([]);
   const [error, setError] = useState(null);

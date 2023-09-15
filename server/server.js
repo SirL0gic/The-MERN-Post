@@ -1,5 +1,6 @@
 //Imports
 const express = require("express");
+const compression = require('compression');
 const NewsAPI = require("newsapi");
 const dotenv = require("dotenv");
 const axios = require("axios");
@@ -7,6 +8,7 @@ const { MongoClient, ServerApiVersion } = require("mongodb");
 
 //Backend Config
 const app = express();
+app.use(compression());  // Use compression middleware before all your other routes/middlewares
 const host = "127.0.0.1";
 const public_host = "0.0.0.0";
 const port = 4000;
@@ -22,6 +24,7 @@ const cors = require("cors");
 app.use(cors()); //use this for debuging
 
 app.use(express.json()); // This is essential to parse incoming JSON payloads
+
 
 let fetchCategoryNews = (category, res) => {
   newsapi.v2.topHeadlines({
