@@ -17,7 +17,7 @@ let NewsCard = (props) => {
 
   return (
     <div className="card" style={{ width: "80%", marginBottom: "50px" }}>
-      <img src={props.image} className="card-img-top" id="new-imgg" alt="news-img" />
+      <img src={props.image} loading="lazy" className="card-img-top" id="new-imgg" alt="news-img" />
       <div className="card-body">
         <h4 className="card-title">{props.title}</h4>
         <p className="card-text">
@@ -35,6 +35,7 @@ let NewsCard = (props) => {
 
         <img
           className="share-img"
+          loading="lazy"
           src={ShareImg}
           width="25px"
           height="25px"

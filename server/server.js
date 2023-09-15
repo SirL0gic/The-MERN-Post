@@ -109,7 +109,7 @@ app.get("/api/top-headlines", async (req, res) => {
 
     const articles = await collection.find().toArray();
 
-    res.status(200).send(articles);
+    res.status(200).send(articles.slice(0, 10));
     console.log("db working");
   } catch (error) {
     res.status(500).send("Error occurred: " + error.message);
