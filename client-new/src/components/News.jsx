@@ -12,7 +12,6 @@ let NewsCard = (props) => {
     tempElement.select();
     document.execCommand("copy");
     document.body.removeChild(tempElement);
-    // alert("Link copied to clipboard!");
     setMsg("Link copied to clipboard!")
   };
 
