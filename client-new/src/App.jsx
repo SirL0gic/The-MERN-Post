@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/Home";
 import ReadPage from "./components/Fullpage";
-import SportsPage from "./pages/Sports";
+import NotFound from "./components/ErrorPage";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -11,7 +11,11 @@ let App = () => {
     <>
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
-        <Route path="/sports" element={<SportsPage/>}></Route>
+        <Route path="/sports" element={<NotFound/>}></Route>
+        <Route path="/business" element={<NotFound/>}></Route>
+        <Route path="/health" element={<NotFound/>}></Route>
+        <Route path="/entertainment" element={<NotFound/>}></Route>
+        <Route path="/technology" element={<NotFound/>}></Route>
         <Route path="/article/:id" element={<ReadPage/>}></Route>
       </Routes>
     </>
