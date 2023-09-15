@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import {
   MDBCard,
   MDBCardBody,
   MDBCol,
   MDBContainer,
-  MDBIcon,
   MDBRow,
   MDBTypography,
 } from "mdb-react-ui-kit";
@@ -18,7 +17,6 @@ export default function Basic() {
       // Get user's IP address
       const ipResponse = await axios.get("https://api.ipify.org?format=json");
       const ipAddress = ipResponse.data.ip;
-
 
       // Send IP to your backend to get weather data
       const weatherResponse = await axios.post(
@@ -36,8 +34,8 @@ export default function Basic() {
     fetchWeatherData();
   }, []);
 
-  return (
-    <section>
+  let LoadedWeather = () => {
+    return (
       <MDBContainer className="h-100">
         <MDBRow className="justify-content-center align-items-center h-100">
           <MDBCol md="8" lg="6" xl="4">
@@ -56,11 +54,15 @@ export default function Basic() {
                     className="display-4 mb-0 font-weight-bold"
                     style={{ color: "#1C2331" }}
                   >
-                 {weatheraData.temperatureInC}&deg;C
+                    {weatheraData.temperatureInC}&deg;C
                   </MDBTypography>
                   <span className="small" style={{ color: "#868B94" }}>
                     {weatheraData.conditionText}
-                    <img height="30px" src={weatheraData.icon} alt="weather-icon"></img>
+                    <img
+                      height="30px"
+                      src={weatheraData.icon}
+                      alt="weather-icon"
+                    ></img>
                   </span>
                 </div>
               </MDBCardBody>
@@ -68,6 +70,20 @@ export default function Basic() {
           </MDBCol>
         </MDBRow>
       </MDBContainer>
+    );
+  };
+
+  let UnLoadedWeather = () => {
+    return (
+      <>
+        <p>Loading...</p>
+      </>
+    );
+  };
+
+  return (
+    <section>
+      {weatheraData.length != 0 ? <LoadedWeather /> : <UnLoadedWeather />}
     </section>
   );
 }
