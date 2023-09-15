@@ -9,8 +9,9 @@ import {
   MDBTypography,
 } from "mdb-react-ui-kit";
 
-export default function Basic() {
+let Basic = () => {
   const [weatheraData, setWeatherData] = useState([]);
+  const [error, setError] = useState(null);
 
   let fetchWeatherData = async () => {
     try {
@@ -27,6 +28,7 @@ export default function Basic() {
       setWeatherData(weatherResponse.data);
     } catch (error) {
       console.error("Error fetching weather data:", error);
+      setError("Failed to load weather data. Please try again later.");
     }
   };
 
@@ -73,17 +75,19 @@ export default function Basic() {
     );
   };
 
-  let UnLoadedWeather = () => {
-    return (
-      <>
-        <p>Loading...</p>
-      </>
-    );
-  };
+  let UnLoadedWeather = () => <p>Loading...</p>;
 
   return (
     <section>
-      {weatheraData.length != 0 ? <LoadedWeather /> : <UnLoadedWeather />}
+      {error ? (
+        <p>{error}</p>
+      ) : weatheraData.length !== 0 ? (
+        <LoadedWeather />
+      ) : (
+        <UnLoadedWeather />
+      )}
     </section>
   );
-}
+};
+
+export default Basic;
