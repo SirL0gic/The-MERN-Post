@@ -3,6 +3,7 @@ import HomePage from "./pages/Home";
 import ReadPage from "./components/Fullpage";
 import SportsPage from "./pages/Sports";
 
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 let App = () => {
