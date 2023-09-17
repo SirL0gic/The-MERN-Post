@@ -28,7 +28,7 @@ const cors = require("cors");
 app.use(
   cors({
     origin: (origin, callback) => {
-      if (origin === "https://www.fuelwatch.xyz" || origin === "https://fuelwatch.xyz") {
+      if (origin === "https://www.thereactpost.xyz" || origin === "https://thereactpost.xyz") {
         callback(null, true);
       } else {
         callback(new Error("Not allowed by CORS"));
