@@ -22,7 +22,7 @@ let Basic = () => {
 
       // Send IP to your backend to get weather data
       const weatherResponse = await axios.post(
-        "http://localhost:4000/api/weather",
+        "/api/weather",
         { ip: ipAddress }
       );
 
