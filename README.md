@@ -1,2 +1,3 @@
 # The-React-Post
-News WebApp created using React JS.
+### Website: https://thereactpost.xyz/
+News WebApp created using React and Node. 
