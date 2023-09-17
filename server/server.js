@@ -5,6 +5,7 @@ const NewsAPI = require("newsapi");
 const dotenv = require("dotenv");
 const axios = require("axios");
 const { MongoClient, ServerApiVersion } = require("mongodb");
+const rateLimit = require("express-rate-limit"); // for dos rate limit
 
 //Backend Config
 const app = express();
@@ -21,10 +22,40 @@ const weather_service_api = process.env.WEATHERAPI;
 
 //For cross orgin requests and Enable CORS for all routes.
 const cors = require("cors");
-app.use(cors()); //use this for debuging
+// app.use(cors()); //use this for debuging
+
+// Allow requests only from www.fuelwatch.xyz and fuelwatch.xyz,
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (origin === "https://www.fuelwatch.xyz" || origin === "https://fuelwatch.xyz") {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+  })
+);
+
+// Custom error handler for CORS errors
+app.use((err, req, res, next) => {
+  if (err.message === "Not allowed by CORS") {
+    res.status(403).send("CORS Error: Not allowed by CORS");
+  } else {
+    next(err);
+  }
+});
 
 app.use(express.json()); // This is essential to parse incoming JSON payloads
 
+// Implement rate limiting middleware
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 10 minutes
+  max: 100, // limit each IP to 100 requests per windowMs
+  message: "Too many requests from this IP, please try again later.",
+});
+
+app.use(limiter);
 
 app.post("/api/weather", async (req, res) => {
   const ipAddress = req.body.ip;
@@ -118,7 +149,6 @@ app.get("/api/top-headlines", async (req, res) => {
   }
 });
 
-
-app.listen(port, host, () => {
+app.listen(port, public_host, () => {
   console.log("Server is now running on port", port);
 });
