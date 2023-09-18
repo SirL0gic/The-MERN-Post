@@ -1,13 +1,12 @@
 const NewsAPI = require("newsapi");
 const dotenv = require("dotenv");
-const axios = require("axios");
 const { MongoClient, ServerApiVersion } = require("mongodb");
 
 //Env variables
 dotenv.config();
 const newsapi = new NewsAPI(process.env.NEWSAPIKEY);
 const url = process.env.MONGODB_URI;
-const weather_service_api = process.env.WEATHERAPI;
+
 
 let script = async () => {
     const DATABASE_NAME = "News";
@@ -61,3 +60,5 @@ let script = async () => {
       console.log(error.message);
     }
   };
+
+  script()
