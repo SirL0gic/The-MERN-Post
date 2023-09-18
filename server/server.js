@@ -24,21 +24,20 @@ const app = express();
 // });
 
 // CORS Configuration
-app.use((req, res, next) => {
-  const allowedOrigins = ["https://www.thereactpost.xyz", "https://thereactpost.xyz"];
-  const origin = req.headers.origin;
+// app.use((req, res, next) => {
+//   const allowedOrigins = ["https://www.thereactpost.xyz", "https://thereactpost.xyz"];
+//   const origin = req.headers.origin;
 
-  if (allowedOrigins.includes(origin)) {
-      res.header("Access-Control-Allow-Origin", origin);
-      res.header("Access-Control-Allow-Methods", "GET,POST");
-      res.header("Access-Control-Allow-Headers", "Content-Type");
-      next();
-  } else {
-    return res.status(403).send(`Unauthorized origin: ${origin}`);
+//   if (allowedOrigins.includes(origin)) {
+//       res.header("Access-Control-Allow-Origin", origin);
+//       res.header("Access-Control-Allow-Methods", "GET,POST");
+//       res.header("Access-Control-Allow-Headers", "Content-Type");
+//       next();
+//   } else {
+//     return res.status(403).send(`Unauthorized origin: ${origin}`);
 
-  }
-});
-
+//   }
+// });
 
 // app.use(cors());
 // app.use(
@@ -65,13 +64,12 @@ app.use((req, res, next) => {
 app.use(compression());
 app.use(express.json());
 
-app.set('trust proxy', true); // to trust x-forward
 
 // Rate Limiting Middleware
 app.use(
   rateLimit({
     windowMs: 15 * 60 * 1000,
-    max: 100,
+    max: 50,
     message: "Too many requests from this IP, please try again later.",
   })
 );
@@ -144,7 +142,7 @@ app.get("/api/top-headlines", async (req, res) => {
     const articles = await collection.find().toArray();
 
     res.status(200).send(articles.slice(0, 10));
-    console.log("db working");
+    console.log("News Data Sent");
   } catch (error) {
     res.status(500).send("Error occurred: " + error.message);
   } finally {
