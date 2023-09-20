@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 import ShareImg from "../assets/share.png";
+import RobotImg from "../assets/robot.png"
+
 
 let NewsCard = (props) => {
   const [msg, setMsg] = useState("")
+  const [level, setLevel] = useState("")
 
   const copyToClipboard = (value) => {
     const tempElement = document.createElement("textarea");
@@ -14,6 +18,16 @@ let NewsCard = (props) => {
     document.body.removeChild(tempElement);
     setMsg("Link copied to clipboard!")
   };
+
+  const getSenti = () => {
+    const dev_url = "http://localhost:4000";
+    const production_url = "https://thereactpost.xyz";
+    axios.defaults.baseURL = dev_url;
+
+    const analysis = axios.post("/api/senti",props.description);
+    console.log(analysis);
+
+  }
 
   return (
     <div className="card" style={{ width: "80%", marginBottom: "50px" }}>
@@ -42,6 +56,15 @@ let NewsCard = (props) => {
           alt="share-icon"
           style={{ marginLeft: "20px" }}
           onClick={() => copyToClipboard(props.link)}
+        />
+        <img
+        className="ai-analyse"
+        loading="lazy"
+        src={RobotImg}
+        width="35px"
+        height="35px"
+        alt="robot-icon"
+        style={{ marginLeft: "30px", marginBottom:"5px" }}
         />
         <p style={{ marginTop: "20px" }}>{msg}</p>
       </div>
