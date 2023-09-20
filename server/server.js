@@ -4,7 +4,8 @@ const dotenv = require("dotenv");
 const axios = require("axios");
 const { MongoClient, ServerApiVersion } = require("mongodb");
 const rateLimit = require("express-rate-limit");
-// const cors = require("cors");
+const cors = require("cors");
+const sentiment = require("textanalyser.js")
 
 dotenv.config();
 
@@ -39,7 +40,6 @@ const app = express();
 //   }
 // });
 
-// app.use(cors());
 // app.use(
 //   cors({
 //     origin: (origin, callback) => {
@@ -61,6 +61,7 @@ const app = express();
 //   }
 // });
 
+app.use(cors());
 app.use(compression());
 app.use(express.json());
 
@@ -149,5 +150,10 @@ app.get("/api/top-headlines", async (req, res) => {
     await client.close();
   }
 });
+
+app.post("/api/senti", async (req,res) => {
+  console.log(req.data)
+})
+
 
 app.listen(PORT, HOST, () => console.log(`Server started on ${HOST}:${PORT}`));

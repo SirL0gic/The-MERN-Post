@@ -22,7 +22,7 @@ let HomePage = () => {
     try {
       const dev_url = "http://localhost:4000";
       const production_url = "https://thereactpost.xyz";
-      axios.defaults.baseURL = production_url;
+      axios.defaults.baseURL = dev_url;
 
       const response = await axios.get("/api/top-headlines");
       setAllArticles(response.data);
