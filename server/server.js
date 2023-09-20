@@ -152,6 +152,7 @@ app.get("/api/top-headlines", async (req, res) => {
 });
 
 app.post("/api/senti", async (req,res) => {
+  console.log(typeof(req.body.textual))
   console.log(req.body.textual)
   let final_analysis = await sentiment();
 
