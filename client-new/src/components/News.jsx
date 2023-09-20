@@ -19,12 +19,12 @@ let NewsCard = (props) => {
     setMsg("Link copied to clipboard!")
   };
 
-  const getSenti = () => {
+  const getSenti = async (text) => {
     const dev_url = "http://localhost:4000";
     const production_url = "https://thereactpost.xyz";
     axios.defaults.baseURL = dev_url;
 
-    const analysis = axios.post("/api/senti",props.description);
+    const analysis = await axios.post("/api/senti",{textual: text});
     console.log(analysis);
 
   }
@@ -65,6 +65,7 @@ let NewsCard = (props) => {
         height="35px"
         alt="robot-icon"
         style={{ marginLeft: "30px", marginBottom:"5px" }}
+        onClick={() => getSenti(props.description)}
         />
         <p style={{ marginTop: "20px" }}>{msg}</p>
       </div>

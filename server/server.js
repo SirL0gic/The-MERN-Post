@@ -152,7 +152,10 @@ app.get("/api/top-headlines", async (req, res) => {
 });
 
 app.post("/api/senti", async (req,res) => {
-  console.log(req.data)
+  console.log(req.body.textual)
+  let final_analysis = await sentiment();
+
+  console.log(final_analysis)
 })
 
 
