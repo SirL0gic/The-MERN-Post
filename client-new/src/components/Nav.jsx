@@ -15,9 +15,6 @@ let NavBar = () => {
           <Link to="/business">Business</Link>
         </li>
         <li className="nav-list-item">
-          <Link to="/health">Health</Link>
-        </li>
-        <li className="nav-list-item">
           <Link to="/entertainment">Entertainment</Link>
         </li>
         <li className="nav-list-item">

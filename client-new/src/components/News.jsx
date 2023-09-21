@@ -70,7 +70,7 @@ let NewsCard = (props) => {
           onClick={() => getSenti(props.description)}
         />
         <p style={{ marginTop: "20px" }}>{msg}</p>
-        <p style={{ marginTop: "20px" }}>Positivity Value: {level.positivityValue} {level.emoji}</p>
+        <p style={{ marginTop: "20px" }}>Positivity: {level.positivityValue} {level.emoji}</p>
       </div>
     </div>
   );
