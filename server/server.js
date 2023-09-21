@@ -5,7 +5,9 @@ const axios = require("axios");
 const { MongoClient, ServerApiVersion } = require("mongodb");
 const rateLimit = require("express-rate-limit");
 const cors = require("cors");
-const { exec } = require('child_process');
+const { exec } = require("child_process");
+const sqlite3 = require('sqlite3').verbose();
+const dbPath = "./newsDatabase.db"; // SQLite database file path
 
 dotenv.config();
 
@@ -14,7 +16,6 @@ const HOST = "127.0.0.1";
 const PORT = 4000;
 const MONGODB_URI = process.env.MONGODB_URI;
 const WEATHER_API_KEY = process.env.WEATHERAPI;
-
 
 // Initialize Express app
 const app = express();
@@ -25,21 +26,7 @@ const app = express();
 // });
 
 // CORS Configuration
-// app.use((req, res, next) => {
-//   const allowedOrigins = ["https://www.thereactpost.xyz", "https://thereactpost.xyz"];
-//   const origin = req.headers.origin;
-
-//   if (allowedOrigins.includes(origin)) {
-//       res.header("Access-Control-Allow-Origin", origin);
-//       res.header("Access-Control-Allow-Methods", "GET,POST");
-//       res.header("Access-Control-Allow-Headers", "Content-Type");
-//       next();
-//   } else {
-//     return res.status(403).send(`Unauthorized origin: ${origin}`);
-
-//   }
-// });
-
+app.use(cors()); // For Debug
 // app.use(
 //   cors({
 //     origin: (origin, callback) => {
@@ -61,10 +48,8 @@ const app = express();
 //   }
 // });
 
-app.use(cors());
 app.use(compression());
 app.use(express.json());
-
 
 // Rate Limiting Middleware
 app.use(
@@ -122,43 +107,35 @@ app.get("/api/mongo-test", async (req, res) => {
   }
 });
 
-app.get("/api/top-headlines", async (req, res) => {
-  const DATABASE_NAME = "News";
-  const COLLECTION_NAME = "top-news";
 
-  const client = new MongoClient(MONGODB_URI, {
-    serverApi: {
-      version: ServerApiVersion.v1,
-      strict: true,
-      deprecationErrors: true,
-    },
+app.get("/api/top-headlines", (req, res) => {
+  let db = new sqlite3.Database(dbPath, (err) => {
+      if (err) {
+          return res.status(500).send("Error occurred: " + err.message);
+      }
   });
 
-  try {
-    await client.connect();
+  const query = "SELECT * FROM top_news LIMIT 2"; 
 
-    const db = client.db(DATABASE_NAME);
-    const collection = db.collection(COLLECTION_NAME);
+  db.all(query, [], (err, rows) => {
+      if (err) {
+          res.status(500).send("Error occurred: " + err.message);
+          throw err;
+      }
+      res.status(200).send(rows);
+      console.log("News Data Sent");
+  });
 
-    const articles = await collection.find().toArray();
-
-    res.status(200).send(articles.slice(0, 10));
-    console.log("News Data Sent");
-  } catch (error) {
-    res.status(500).send("Error occurred: " + error.message);
-  } finally {
-    await client.close();
-  }
+  db.close();
 });
 
-app.post("/api/senti", async (req,res) => {
-
+app.post("/api/senti", async (req, res) => {
   function runPythonScript(text) {
     // Specify the path to your Python script
-    const pathToPythonScript = './ai/final.py';
+    const pathToPythonScript = "./ai/final.py";
     // Construct the Python command
     const command = `python3 ${pathToPythonScript} "${text}"`;
-  
+
     exec(command, (error, stdout, stderr) => {
       if (error) {
         console.error(`exec error: ${error}`);
@@ -171,10 +148,8 @@ app.post("/api/senti", async (req,res) => {
     });
   }
 
-
   const sampleText = req.body.textual;
-  runPythonScript(sampleText);  
-})
-
+  runPythonScript(sampleText);
+});
 
 app.listen(PORT, HOST, () => console.log(`Server started on ${HOST}:${PORT}`));
