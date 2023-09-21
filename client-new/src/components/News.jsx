@@ -21,7 +21,7 @@ let NewsCard = (props) => {
   const getSenti = async (text) => {
     const dev_url = "http://localhost:4000";
     const production_url = "https://thereactpost.xyz";
-    axios.defaults.baseURL = dev_url;
+    axios.defaults.baseURL = production_url;
 
     const analysis = await axios.post("/api/senti", { textual: text });
     const levelData = [

@@ -20,33 +20,29 @@ const WEATHER_API_KEY = process.env.WEATHERAPI;
 // Initialize Express app
 const app = express();
 
-// app.use((req, res, next) => {
-//   console.log("Received headers:", req.headers);
-//   next();
-// });
 
 // CORS Configuration
-app.use(cors()); // For Debug
-// app.use(
-//   cors({
-//     origin: (origin, callback) => {
-//       if (origin === "https://www.thereactpost.xyz" || origin === "https://thereactpost.xyz") {
-//         callback(null, true);
-//       } else {
-//         callback(new Error("Not allowed by CORS"));
-//       }
-//     },
-//   })
-// );
+// app.use(cors()); // For Debug
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (origin === "https://www.thereactpost.xyz" || origin === "https://thereactpost.xyz") {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+  })
+);
 
 //Custom error handler for CORS errors
-// app.use((err, req, res, next) => {
-//   if (err.message === "Not allowed by CORS") {
-//     res.status(403).send("CORS Error: Not allowed by CORS");
-//   } else {
-//     next(err);
-//   }
-// });
+app.use((err, req, res, next) => {
+  if (err.message === "Not allowed by CORS") {
+    res.status(403).send("CORS Error: Not allowed by CORS");
+  } else {
+    next(err);
+  }
+});
 
 app.use(compression());
 app.use(express.json());
