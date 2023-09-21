@@ -17,6 +17,6 @@
     "express-rate-limit": "^7.0.1",
     "mongodb": "^6.0.0",
     "newsapi": "^2.4.1",
-    "textanalyser.js": "^1.0.5"
+    "textanalyser.js": "^1.0.6"
   }
 }

@@ -5,7 +5,7 @@ const axios = require("axios");
 const { MongoClient, ServerApiVersion } = require("mongodb");
 const rateLimit = require("express-rate-limit");
 const cors = require("cors");
-const sentiment = require("textanalyser.js")
+const { exec } = require('child_process');
 
 dotenv.config();
 
@@ -152,11 +152,28 @@ app.get("/api/top-headlines", async (req, res) => {
 });
 
 app.post("/api/senti", async (req,res) => {
-  console.log(typeof(req.body.textual))
-  console.log(req.body.textual)
-  let final_analysis = await sentiment();
 
-  console.log(final_analysis)
+  function runPythonScript(text) {
+    // Specify the path to your Python script
+    const pathToPythonScript = './ai/final.py';
+    // Construct the Python command
+    const command = `python3 ${pathToPythonScript} "${text}"`;
+  
+    exec(command, (error, stdout, stderr) => {
+      if (error) {
+        console.error(`exec error: ${error}`);
+        return;
+      }
+      console.log(`stdout: ${stdout}`);
+      if (stderr) {
+        console.error(`stderr: ${stderr}`);
+      }
+    });
+  }
+
+
+  const sampleText = req.body.textual;
+  runPythonScript(sampleText);  
 })
 
 
