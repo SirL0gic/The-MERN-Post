@@ -5,9 +5,9 @@ const axios = require("axios");
 const { MongoClient, ServerApiVersion } = require("mongodb");
 const rateLimit = require("express-rate-limit");
 const cors = require("cors");
-const { exec } = require("child_process");
 const sqlite3 = require('sqlite3').verbose();
 const dbPath = "./newsDatabase.db"; // SQLite database file path
+const sentiment = require("textanalyser.js")
 
 dotenv.config();
 
@@ -22,31 +22,32 @@ const app = express();
 
 
 // CORS Configuration
-// app.use(cors()); // For Debug
-app.use(
-  cors({
-    origin: (origin, callback) => {
-      if (origin === "https://www.thereactpost.xyz" || origin === "https://thereactpost.xyz") {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-  })
-);
+app.use(cors()); // For Debug
+// app.use(
+//   cors({
+//     origin: (origin, callback) => {
+//       if (origin === "https://www.thereactpost.xyz" || origin === "https://thereactpost.xyz") {
+//         callback(null, true);
+//       } else {
+//         callback(new Error("Not allowed by CORS"));
+//       }
+//     },
+//   })
+// );
 
 //Custom error handler for CORS errors
-app.use((err, req, res, next) => {
-  if (err.message === "Not allowed by CORS") {
-    res.status(403).send("CORS Error: Not allowed by CORS");
-  } else {
-    next(err);
-  }
-});
+// app.use((err, req, res, next) => {
+//   if (err.message === "Not allowed by CORS") {
+//     res.status(403).send("CORS Error: Not allowed by CORS");
+//   } else {
+//     next(err);
+//   }
+// });
 
 app.use(compression());
 app.use(express.json());
 
+app.set('trust proxy', 1);
 // Rate Limiting Middleware
 app.use(
   rateLimit({
@@ -125,53 +126,12 @@ app.get("/api/top-headlines", (req, res) => {
   db.close();
 });
 
-app.post("/api/senti", async (req, res) => {
-
-  function runPythonScript(text) {
-    return new Promise((resolve, reject) => {
-      const pathToPythonScript = "./ai/final.py";
-      const command = `python3 ${pathToPythonScript} "${text}"`;
-
-      exec(command, (error, stdout, stderr) => {
-        if (error) {
-          console.error(`exec error: ${error}`);
-          reject(error);
-          return;
-        }
-        // console.log(`stdout: ${stdout}`);
-        if (stderr) {
-          console.error(`stderr: ${stderr}`);
-          reject(new Error(stderr));
-          return;
-        }
-        resolve(stdout);
-      });
-    });
-  }
-
-  try {
-    const sampleText = req.body.textual;
-    const analysisResult = await runPythonScript(sampleText);
-    const y = analysisResult.replace(/[\r\n]/gm, '');
-    const arr = y.split(" ");
-    
-    // Extract values from the array
-    const sentiment = arr[1].replace('Positive', ''); // or split('Positive')[0]
-    const positiveProbability = arr[3].split('Negative')[0];
-    const negativeProbability = arr[5];
-    
-    // Construct the object
-    const responseObject = {
-      sentiment: `Sentiment: ${sentiment}`,
-      positiveProbability: `Positive Probability: ${positiveProbability}`,
-      negativeProbability: `Negative Probability: ${negativeProbability}`
-    };
-    
-    res.json(responseObject);
-  } catch (err) {
-    res.status(500).send("Error processing the request");
-  }
-
-});
+app.post("/api/senti", async (req,res) => {
+  console.log(typeof(req.body.textual))
+  console.log(req.body.textual)
+  let final_analysis = await sentiment(req.body.textual);
+  res.send(final_analysis)
+  console.log(final_analysis)
+})
 
 app.listen(PORT, HOST, () => console.log(`Server started on ${HOST}:${PORT}`));

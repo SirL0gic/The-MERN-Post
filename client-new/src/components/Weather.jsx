@@ -23,7 +23,7 @@ let Basic = () => {
       // Send IP to your backend to get weather data
       const dev_url = "http://localhost:4000";
       const production_url = "https://thereactpost.xyz";
-      axios.defaults.baseURL = dev_url;
+      axios.defaults.baseURL = production_url;
 
       const weatherResponse = await axios.post(
         "/api/weather",

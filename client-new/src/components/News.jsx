@@ -24,12 +24,7 @@ let NewsCard = (props) => {
     axios.defaults.baseURL = production_url;
 
     const analysis = await axios.post("/api/senti", { textual: text });
-    const levelData = [
-      analysis.data.sentiment,
-      analysis.data.positiveProbability,
-      analysis.data.negativeProbability,
-    ];
-    setLevel(levelData);
+    setLevel(analysis.data);
   };
 
   return (
@@ -75,13 +70,7 @@ let NewsCard = (props) => {
           onClick={() => getSenti(props.description)}
         />
         <p style={{ marginTop: "20px" }}>{msg}</p>
-        <div style={{ marginTop: "20px" }}>
-          {level.map((line, index) => (
-            <p key={index} style={{ marginTop: "0px", marginBottom: "0px" }}>
-              {line}
-            </p>
-          ))}
-        </div>
+        <p style={{ marginTop: "20px" }}>Positivity Value: {level.positivityValue} {level.emoji}</p>
       </div>
     </div>
   );
