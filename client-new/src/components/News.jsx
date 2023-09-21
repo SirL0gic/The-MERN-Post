@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import ShareImg from "../assets/share.png";
-import RobotImg from "../assets/robot.png"
-
+import RobotImg from "../assets/robot.png";
 
 let NewsCard = (props) => {
-  const [msg, setMsg] = useState("")
-  const [level, setLevel] = useState("")
+  const [msg, setMsg] = useState("");
+  const [level, setLevel] = useState([]);
 
   const copyToClipboard = (value) => {
     const tempElement = document.createElement("textarea");
@@ -16,7 +15,7 @@ let NewsCard = (props) => {
     tempElement.select();
     document.execCommand("copy");
     document.body.removeChild(tempElement);
-    setMsg("Link copied to clipboard!")
+    setMsg("Link copied to clipboard!");
   };
 
   const getSenti = async (text) => {
@@ -24,14 +23,24 @@ let NewsCard = (props) => {
     const production_url = "https://thereactpost.xyz";
     axios.defaults.baseURL = dev_url;
 
-    const analysis = await axios.post("/api/senti",{textual: text});
-    console.log(analysis);
-
-  }
+    const analysis = await axios.post("/api/senti", { textual: text });
+    const levelData = [
+      analysis.data.sentiment,
+      analysis.data.positiveProbability,
+      analysis.data.negativeProbability,
+    ];
+    setLevel(levelData);
+  };
 
   return (
     <div className="card" style={{ width: "80%", marginBottom: "50px" }}>
-      <img src={props.image} loading="lazy" className="card-img-top" id="new-imgg" alt="news-img" />
+      <img
+        src={props.image}
+        loading="lazy"
+        className="card-img-top"
+        id="new-imgg"
+        alt="news-img"
+      />
       <div className="card-body">
         <h4 className="card-title">{props.title}</h4>
         <p className="card-text">
@@ -42,9 +51,7 @@ let NewsCard = (props) => {
         </p>
         <p className="card-text">{props.description}</p>
         <Link to={`/article/${props.articleIndex}`}>
-          <button className="btn btn-dark">
-            Read More
-          </button>
+          <button className="btn btn-dark">Read More</button>
         </Link>
 
         <img
@@ -54,20 +61,27 @@ let NewsCard = (props) => {
           width="25px"
           height="25px"
           alt="share-icon"
-          style={{ marginLeft: "20px" }}
+          style={{ marginLeft: "20px", cursor: "pointer" }}
           onClick={() => copyToClipboard(props.link)}
         />
         <img
-        className="ai-analyse"
-        loading="lazy"
-        src={RobotImg}
-        width="35px"
-        height="35px"
-        alt="robot-icon"
-        style={{ marginLeft: "30px", marginBottom:"5px" }}
-        onClick={() => getSenti(props.description)}
+          className="ai-analyse"
+          loading="lazy"
+          src={RobotImg}
+          width="35px"
+          height="35px"
+          alt="robot-icon"
+          style={{ marginLeft: "30px", marginBottom: "5px", cursor: "pointer" }}
+          onClick={() => getSenti(props.description)}
         />
         <p style={{ marginTop: "20px" }}>{msg}</p>
+        <div style={{ marginTop: "20px" }}>
+          {level.map((line, index) => (
+            <p key={index} style={{ marginTop: "0px", marginBottom: "0px" }}>
+              {line}
+            </p>
+          ))}
+        </div>
       </div>
     </div>
   );

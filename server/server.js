@@ -115,7 +115,7 @@ app.get("/api/top-headlines", (req, res) => {
       }
   });
 
-  const query = "SELECT * FROM top_news LIMIT 2"; 
+  const query = "SELECT * FROM top_news LIMIT 10"; 
 
   db.all(query, [], (err, rows) => {
       if (err) {
@@ -130,26 +130,52 @@ app.get("/api/top-headlines", (req, res) => {
 });
 
 app.post("/api/senti", async (req, res) => {
-  function runPythonScript(text) {
-    // Specify the path to your Python script
-    const pathToPythonScript = "./ai/final.py";
-    // Construct the Python command
-    const command = `python3 ${pathToPythonScript} "${text}"`;
 
-    exec(command, (error, stdout, stderr) => {
-      if (error) {
-        console.error(`exec error: ${error}`);
-        return;
-      }
-      console.log(`stdout: ${stdout}`);
-      if (stderr) {
-        console.error(`stderr: ${stderr}`);
-      }
+  function runPythonScript(text) {
+    return new Promise((resolve, reject) => {
+      const pathToPythonScript = "./ai/final.py";
+      const command = `python3 ${pathToPythonScript} "${text}"`;
+
+      exec(command, (error, stdout, stderr) => {
+        if (error) {
+          console.error(`exec error: ${error}`);
+          reject(error);
+          return;
+        }
+        // console.log(`stdout: ${stdout}`);
+        if (stderr) {
+          console.error(`stderr: ${stderr}`);
+          reject(new Error(stderr));
+          return;
+        }
+        resolve(stdout);
+      });
     });
   }
 
-  const sampleText = req.body.textual;
-  runPythonScript(sampleText);
+  try {
+    const sampleText = req.body.textual;
+    const analysisResult = await runPythonScript(sampleText);
+    const y = analysisResult.replace(/[\r\n]/gm, '');
+    const arr = y.split(" ");
+    
+    // Extract values from the array
+    const sentiment = arr[1].replace('Positive', ''); // or split('Positive')[0]
+    const positiveProbability = arr[3].split('Negative')[0];
+    const negativeProbability = arr[5];
+    
+    // Construct the object
+    const responseObject = {
+      sentiment: `Sentiment: ${sentiment}`,
+      positiveProbability: `Positive Probability: ${positiveProbability}`,
+      negativeProbability: `Negative Probability: ${negativeProbability}`
+    };
+    
+    res.json(responseObject);
+  } catch (err) {
+    res.status(500).send("Error processing the request");
+  }
+
 });
 
 app.listen(PORT, HOST, () => console.log(`Server started on ${HOST}:${PORT}`));
